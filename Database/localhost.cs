@@ -6,7 +6,9 @@ using Models;
 namespace MyData{
     public class Context : DbContext{
 
-        public  DbSet<CategoriaModels> Categorias { get; set; }
+        public DbSet<CategoriaModels> Categorias { get; set; }
+        public DbSet<ModeloModels> Modelos { get; set; }
+        public DbSet<ProdutoModels> Produtos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "server=localhost;database=trapwiresql;user=root;";
