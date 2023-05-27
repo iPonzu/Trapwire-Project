@@ -6,7 +6,7 @@ namespace Models{
         [Column("ID Modelo")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set;}
-        [Column("Nome: ")]
+        [Column("Modelo: ")]
         public string Modelo { get; set;}
 
         public ModeloModels(string modelo){
