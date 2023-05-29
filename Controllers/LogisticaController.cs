@@ -10,6 +10,10 @@ namespace Controllers{
             new LogisticaModels(data, quantidade, produtoid, estoqueid);
         }
 
+        public void Update(DateTime data, int quantidade, string produtoid, string estoqueid){
+
+        }
+
         public static List<LogisticaModels> Read(){
             return LogisticaModels.Read();   
         }

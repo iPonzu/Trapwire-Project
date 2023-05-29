@@ -43,5 +43,13 @@ namespace Models{
                 return produto;
             }
         }
-    }
+        public static ProdutoModels Update(ProdutoModels produtos){
+            using(var context = new Context()){
+                context.Produtos.Update(produtos);
+                context.SaveChanges();
+
+                return produtos;
+            }
+        }
+    }        
 }    

@@ -38,5 +38,14 @@ namespace Models{
                 return categoria;
             }      
         }
+
+        public static CategoriaModels Update(CategoriaModels categoria){
+            using(var context = new Context()) {
+                context.Categorias.Update(categoria);
+                context.SaveChanges();
+
+                return categoria;
+            }
+        }
     }
 }    
