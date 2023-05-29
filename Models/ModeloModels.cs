@@ -35,5 +35,14 @@ namespace Models{
                 return modelo;
             }   
         }
+        public static ModeloModels Update(ModeloModels modelos){
+            using (var context = new Context()){
+                context.Modelos.Update(modelos);
+                context.SaveChanges();
+            
+            
+                return modelos;
+            }
+        }   
     } 
 }       

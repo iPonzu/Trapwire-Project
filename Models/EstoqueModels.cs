@@ -39,6 +39,14 @@ namespace Models{
                 return estoque;
             }
         }
-    }
+        public static EstoqueModels Update(EstoqueModels estoque){
+            using (var context = new Context()){
+                context.Estoques.Update(estoque);
+                context.SaveChanges();
 
+                return estoque;
+            }
+
+        }
+    }
 }

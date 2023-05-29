@@ -41,5 +41,13 @@ namespace Models{
                 return logistica;
             }
         }
+        public static LogisticaModels Update(LogisticaModels logistica){
+            using (var context = new Context()){
+                context.Logisticas.Update(logistica);
+                context.SaveChanges();
+
+                return logistica;
+            }
+        }
     }
-}
+}    
