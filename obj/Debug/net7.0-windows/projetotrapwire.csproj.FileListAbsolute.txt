@@ -74,3 +74,19 @@ C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-window
 C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.csproj.CopyComplete
 C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.genruntimeconfig.cache
 C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\ref\projetotrapwire.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Google.Protobuf.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Humanizer.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Mono.TextTemplating.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\MySql.Data.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Ubiety.Dns.Core.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Zstandard.Net.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\MySql.Data.EntityFrameworkCore.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Renci.SshNet.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\SshNet.Security.Cryptography.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\System.Xml.XPath.XmlDocument.dll

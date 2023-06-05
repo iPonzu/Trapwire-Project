@@ -30,6 +30,15 @@ namespace Models{
             }
         }
 
+        public static LogisticaModels Update(LogisticaModels logistica){
+            using (var context = new Context()){
+                context.Logisticas.Update(logistica);
+                context.SaveChanges();
+
+                return logistica;
+            }
+        }
+
         public static List<LogisticaModels> Read(){
             using (var context = new Context()){
                 return context.Logisticas.ToList();
@@ -41,13 +50,6 @@ namespace Models{
                 return logistica;
             }
         }
-        public static LogisticaModels Update(LogisticaModels logistica){
-            using (var context = new Context()){
-                context.Logisticas.Update(logistica);
-                context.SaveChanges();
-
-                return logistica;
-            }
-        }
+        
     }
 }    

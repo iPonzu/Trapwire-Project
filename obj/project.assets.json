@@ -6821,32 +6821,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\andre.lima2\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\joao_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre.lima2\\Desktop\\Nova pasta\\Projeto-Trapwire\\projetotrapwire.csproj",
+      "projectUniqueName": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
       "projectName": "projetotrapwire",
-      "projectPath": "C:\\Users\\andre.lima2\\Desktop\\Nova pasta\\Projeto-Trapwire\\projetotrapwire.csproj",
-      "packagesPath": "C:\\Users\\andre.lima2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre.lima2\\Desktop\\Nova pasta\\Projeto-Trapwire\\obj\\",
+      "projectPath": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
+      "packagesPath": "C:\\Users\\joao_\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joao_\\projetotrapwire\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\andre.lima2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\joao_\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

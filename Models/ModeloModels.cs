@@ -5,12 +5,12 @@ namespace Models{
     public class ModeloModels{
         [Column("ID Modelo")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set;}
+        public int Id { get; set; }
         [Column("Modelo: ")]
-        public string Modelo { get; set;}
+        public string Nome { get; set;}
 
-        public ModeloModels(string modelo){
-            this.Modelo = modelo;
+        public ModeloModels(string nome){
+            this.Nome = nome;
 
             this.Create(this);
         }
@@ -24,6 +24,15 @@ namespace Models{
             }
         }
 
+        public static ModeloModels Update(ModeloModels modelo){
+            using(var context = new Context()) {
+                context.Modelos.Update(modelo);
+                context.SaveChanges();
+
+                return modelo;
+            }
+        }
+
         public static List<ModeloModels> Read(){
             using (var context = new Context()){
                 return context.Modelos.ToList();
@@ -34,15 +43,6 @@ namespace Models{
                 var modelo = context.Modelos.Find(id);
                 return modelo;
             }   
-        }
-        public static ModeloModels Update(ModeloModels modelos){
-            using (var context = new Context()){
-                context.Modelos.Update(modelos);
-                context.SaveChanges();
-            
-            
-                return modelos;
-            }
-        }   
+        }  
     } 
 }       
