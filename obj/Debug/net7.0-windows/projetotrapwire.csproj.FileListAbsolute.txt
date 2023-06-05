@@ -28,3 +28,65 @@ C:\Users\joao_\projetotrapwire\obj\Debug\net7.0-windows\refint\projetotrapwire.d
 C:\Users\joao_\projetotrapwire\obj\Debug\net7.0-windows\projetotrapwire.pdb
 C:\Users\joao_\projetotrapwire\obj\Debug\net7.0-windows\projetotrapwire.genruntimeconfig.cache
 C:\Users\joao_\projetotrapwire\obj\Debug\net7.0-windows\ref\projetotrapwire.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.csproj.AssemblyReference.cache
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfoInputs.cache
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfo.cs
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.csproj.CoreCompileInputs.cache
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\refint\projetotrapwire.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.pdb
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\projetotrapwire.exe
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\projetotrapwire.deps.json
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\projetotrapwire.runtimeconfig.json
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\projetotrapwire.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\projetotrapwire.pdb
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Google.Protobuf.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Humanizer.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Mono.TextTemplating.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\MySql.Data.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Ubiety.Dns.Core.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Zstandard.Net.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\MySql.Data.EntityFrameworkCore.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\MySqlConnector.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\Renci.SshNet.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\SshNet.Security.Cryptography.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\bin\Debug\net7.0-windows\System.Xml.XPath.XmlDocument.dll
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.csproj.CopyComplete
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\projetotrapwire.genruntimeconfig.cache
+C:\Users\andre.lima2\Desktop\Nova pasta\Projeto-Trapwire\obj\Debug\net7.0-windows\ref\projetotrapwire.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Google.Protobuf.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Humanizer.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\K4os.Hash.xxHash.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Mono.TextTemplating.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\MySql.Data.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Ubiety.Dns.Core.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Zstandard.Net.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\MySql.Data.EntityFrameworkCore.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Renci.SshNet.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\SshNet.Security.Cryptography.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\System.Xml.XPath.XmlDocument.dll

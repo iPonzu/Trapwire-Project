@@ -9,14 +9,14 @@ namespace Models{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get;set; }
         [Column("Marca")]
-        public string Marca { get; set; }
+        public string Marcaid { get; set; }
         [Column("Modelo")]
         public string Modeloid { get; set; }
         [Column("Categoria")]
         public string Categoriaid { get; set; }
 
-        public ProdutoModels(string marca, string modeloid, string categoriaid){
-            this.Marca = marca;
+        public ProdutoModels(string marcaid, string modeloid, string categoriaid){
+            this.Marcaid = marcaid;
             this.Modeloid = modeloid;
             this.Categoriaid = categoriaid;
 
@@ -28,6 +28,15 @@ namespace Models{
             using(var context = new Context()){
                 context.Produtos.Add(produto);
                 context.SaveChanges();
+            }
+        }
+
+        public static ProdutoModels Update(ProdutoModels produto){
+            using(var context = new Context()) {
+                context.Produtos.Update(produto);
+                context.SaveChanges();
+
+                return produto;
             }
         }
 
@@ -43,13 +52,6 @@ namespace Models{
                 return produto;
             }
         }
-        public static ProdutoModels Update(ProdutoModels produtos){
-            using(var context = new Context()){
-                context.Produtos.Update(produtos);
-                context.SaveChanges();
-
-                return produtos;
-            }
-        }
-    }        
+        
+    }       
 }    

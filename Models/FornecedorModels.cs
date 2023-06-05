@@ -35,6 +35,14 @@ namespace Models{
                 context.SaveChanges();
             }
         }
+        public static FornecedorModels Update(FornecedorModels fornecedor){ 
+            using(var context = new Context()) {
+                context.Fornecedores.Update(fornecedor);
+                context.SaveChanges();
+
+                return fornecedor;
+            }
+        }    
         public static List<FornecedorModels> Read(){
             using (var context = new Context()){
                 return context.Fornecedores.ToList();
@@ -44,7 +52,8 @@ namespace Models{
             using (var context = new Context()){
                 var fornecedor = context.Fornecedores.Find(id);
                 return fornecedor;
-           }
+            }
         }
+        
     }
 }

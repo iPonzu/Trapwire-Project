@@ -8,6 +8,23 @@ namespace Controllers{
                 throw new Exception("Estoque não encontrado");
             }
         }
+        public void Update(string idRef, string nome, string endereco){
+            int id = 0;
+            try{
+                id = int.Parse(idRef);
+            } catch (Exception e){
+                throw new Exception("ID inválido.");
+            }
+            EstoqueModels estoque = EstoqueModels.ReadById(id);
+            if(estoque == null){
+                throw new Exception("Estoque inválido.");
+            }
+            if(nome != null && nome.Length > 0 || endereco != null && endereco.Length > 0){
+                estoque.Nome = nome;
+                estoque.Endereco = endereco;
+            }
+            EstoqueModels.Update(estoque);
+        }
         public static List<EstoqueModels> Read(){
             return EstoqueModels.Read();
         }

@@ -28,6 +28,15 @@ namespace Models{
             }
         }
 
+       
+       public static EstoqueModels Update(EstoqueModels estoque){
+            using(var context = new Context()) {
+                context.Estoques.Update(estoque);
+                context.SaveChanges();
+
+                return estoque;
+            }
+        }
         public static List<EstoqueModels> Read(){
             using (var context = new Context()){
                 return context.Estoques.ToList();
@@ -38,15 +47,6 @@ namespace Models{
                 var estoque = context.Estoques.Find(id);
                 return estoque;
             }
-        }
-        public static EstoqueModels Update(EstoqueModels estoque){
-            using (var context = new Context()){
-                context.Estoques.Update(estoque);
-                context.SaveChanges();
-
-                return estoque;
-            }
-
         }
     }
 }
