@@ -4,8 +4,8 @@ using System.Windows.Forms;
 
 namespace Views{
 
-    public class ModeloCreate : Form
-    {
+    public class ModeloCreate : Form{
+        
         public Label lblid;
         public TextBox txtid;
         public Label lblmodelo;
