@@ -33,6 +33,7 @@ public class ProdutoController{
     }
     public static ProdutoModels ReadById(int id){
         return ProdutoModels.ReadById(id);
+<<<<<<< HEAD
 namespace Controllers {
     public class ProdutoController{
         public void Create(string marca, string modeloid, string categoriaid){
@@ -47,5 +48,7 @@ namespace Controllers {
         public static ProdutoModels ReadById(int id){
             return ProdutoModels.ReadById(id);
         }
+=======
+>>>>>>> 395ddfe4c1e11b0058fabd747f7fb5d2b86c94c7
     }
 }
