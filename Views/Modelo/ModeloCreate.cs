@@ -75,6 +75,7 @@ namespace Views{
             this.btCadt.Location = new Point(10, 130);
             this.btCadt.Size = new Size(70, 20);
 
+
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.lblmodelo);

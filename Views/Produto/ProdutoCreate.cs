@@ -1,3 +1,38 @@
+// /* testing space */
+
+
+// using Models;
+// using Controllers;
+// using System.Windows.Forms;
+
+// namespace Views{
+//     public class test : Form{
+//         public enum Option { Upgrade, Delete }
+
+//         private void AddListView(ModeloModels modelo){
+//             string[] row = {
+//                 modelo.Id.ToString(),
+//                 modelo.Nome.ToString(),
+//             };
+
+//             ListViewItem item = new ListViewItem(row);
+//             // TODO: Adicionar item à lista
+//         }
+
+//         public void RefreshList()
+//         {
+//             // TODO: Criar lista
+
+//             List<ModeloModels> list = ModeloController.Read();
+
+//             foreach (ModeloModels modelo in list) //modelo models (declarar modelo) in (lista)
+//             {
+//                 AddListView(modelo);
+//             }
+//         }
+//     }
+// }
+
 using Controllers;
 using Models;
 using System.Windows.Forms;
@@ -10,60 +45,78 @@ namespace Views{
         public TextBox txtid;
         public Label lblmarca;
         public TextBox txtmarca;
+        public Label lblmodelo;
+        public TextBox txtmodelo;
         public Label lblcategoria;
         public TextBox txtcategoria;
         public Button btCadt;
 
         public ProdutoCreate()
         {
-            this.Text = "Registrar Produto";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Size = new System.Drawing.Size(280, 360);
+            Text = "Registrar Produto";
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Size = new System.Drawing.Size(280, 360);
 
-            this.lblid = new Label();
-            this.lblid.Text = "Id:";
-            this.lblid.Location = new Point(10, 50); 
-            this.lblid.Size = new Size(50, 20); 
+        // id - lbl
+            lblid = new Label();
+            lblid.Text = "ID:";
+            lblid.Location = new Point(10, 20); // Horizontal, Vertical
+            lblid.Size = new Size(20, 20); // Largura, Altura
+        // id - txt
+            txtid = new TextBox();  
+            txtid.Location = new Point(80, 20);
+            txtid.Size = new Size(50, 30);
 
-            this.txtid = new TextBox();  
-            this.txtid.Location = new Point(80, 40);
-            this.txtid.Size = new Size(150, 20);
+            lblmarca = new Label();
+            lblmarca.Text = "Marca:";
+            lblmarca.Location = new Point(10, 50);
+            lblmarca.Size = new Size(50, 20);
 
-            this.lblmarca = new Label();
-            this.lblmarca.Text = "marca:";
-            this.lblid.Location = new Point(10, 70);
-            this.lblid.Size = new Size(50, 20);
+            txtmarca = new TextBox();
+            txtmarca.Location = new Point(80, 50);
+            txtmarca.Size = new Size(100, 20);
 
-            this.txtmarca = new TextBox();
-            this.txtmarca.Location = new Point(80, 70);
-            this.txtmarca.Size = new Size(150, 20);
+            lblmodelo = new Label();
+            lblmodelo.Text = "Modelo:";
+            lblmodelo.Location = new Point(10, 80);
+            lblmodelo.Size = new Size(50, 20);
 
-            this.lblcategoria = new Label();
-            this.lblcategoria.Text = "categoria:";
-            this.lblid.Location = new Point(10, 70);
-            this.lblid.Size = new Size(50, 20);
+            txtmodelo = new TextBox();
+            txtmodelo.Location = new Point(80, 80);
+            txtmodelo.Size = new Size(80, 20);
 
-            this.txtcategoria = new TextBox();
-            this.txtcategoria.Location = new Point(80, 70);
-            this.txtcategoria.Size = new Size(150, 20);
+            lblcategoria = new Label();
+            lblcategoria.Text = "Categoria:";
+            lblcategoria.Location = new Point(10, 110);
+            lblcategoria.Size = new Size(70, 20);
 
-            this.btCadt = new Button();
-            this.btCadt.Text = "Cadastrar";
-            this.btCadt.Location = new Point(10, 130);
-            this.btCadt.Size = new Size(70, 20);
+            txtcategoria = new TextBox();
+            txtcategoria.Location = new Point(80, 110);
+            txtcategoria.Size = new Size(150, 20);
 
-            this.Controls.Add(this.lblid);
-            this.Controls.Add(this.txtid);
-            this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.txtmarca);
-            this.Controls.Add(this.lblcategoria);
-            this.Controls.Add(this.txtcategoria);
-            this.Controls.Add(this.btCadt);
+            /* buttons */
+            btCadt = new Button();
+            btCadt.Text = "Cadastrar";
+            btCadt.Location = new Point(10, 150);
+            btCadt.Size = new Size(70, 20);
+
+
+
+
+            Controls.Add(lblid);
+            Controls.Add(txtid);
+            Controls.Add(lblmarca);
+            Controls.Add(txtmarca);
+            Controls.Add(lblcategoria);
+            Controls.Add(txtcategoria);
+            Controls.Add(lblmodelo);
+            Controls.Add(txtmodelo);
+            Controls.Add(btCadt);
         }
     }   
 }

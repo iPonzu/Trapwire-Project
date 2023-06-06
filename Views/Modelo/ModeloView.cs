@@ -1,35 +1,24 @@
-using Models;
 using Controllers;
-        
-        
+using Models;
+
 namespace Views{
-    public class ListModelo : From{
+    public class ModeloView : Form{
+        public enum Option {Upgrade, Delete}
 
-        public enum option {Upgrade, Delete}
-
-
-        ListView ListModelo;
-
-        private void AddListView(Models.ModeloModels produto){
-
-            string[]row = {
-
-            modelo.id.ToString(),
-            modelo.Modelo 
+        private void AddListView(ModeloModels modelo){
+            string[] row = {
+                modelo.Id.ToString(),
+                modelo.Nome.ToString(),
             };
 
             ListViewItem item = new ListViewItem(row);
-                // TODO> Criar lista
+            // TODO: add list items
         }
-        public void RefreshList()
-        {
-                // TODO> Criar lista
+        public void RefreshList(){
+            // TODO: create list
 
-            List<Models.ModeloModels> list = Controllers.ModeloController.Read();
-
-
-            foreach (Models.ProdutoModels produto in list)
-            {
+            List<ModeloModels> list = Controllers.ModeloController.Read();
+            foreach (Models.ModeloModels modelo in list){
                 AddListView(modelo);
             }
         }
