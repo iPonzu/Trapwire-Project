@@ -13,7 +13,7 @@ namespace Views{
             string[]row = {
 
                 produto.Id.ToString(),
-                produto.Marca,
+                produto.Marcaid.ToString(),
                 produto.Categoriaid.ToString()
             };
 
@@ -27,7 +27,7 @@ namespace Views{
             // TODO> Criar lista
             // listProduto.Items.Clear();
 
-            List<Models.ProdutoModels> list = Controllers.ProdutoController.Read();
+            List<Models.ProdutoModels> list = ProdutoController.Read();
 
             foreach (Models.ProdutoModels produto in list)
             {

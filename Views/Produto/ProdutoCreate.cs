@@ -65,6 +65,5 @@ namespace Views{
             this.Controls.Add(this.txtcategoria);
             this.Controls.Add(this.btCadt);
         }
-    }
-    
+    }   
 }
