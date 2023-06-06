@@ -21,7 +21,6 @@ namespace Views{
             // TODO> Criar lista
             // listProduto.Items.Add(item);
         }
-
         public void RefreshList()
         {
             // TODO> Criar lista
