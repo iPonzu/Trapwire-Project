@@ -34,7 +34,5 @@ namespace Views{
                 AddListView(produto);
             }
         }
-
-    
     }
 }
