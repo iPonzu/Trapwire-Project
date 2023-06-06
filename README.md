@@ -13,7 +13,7 @@
 <h3>Instalando 💻</h3>
 <p>Clone este repositório utilizando o link abaixo: </p>
 
-<pre><code>git clone https://github.com/iPonzu/Projeto-Trapwire.git</code></pre>
+<pre><code>git clone https://github.com/iPonzu/Trapwire-Project.git</code></pre>
 
 <p>Logo após a clonagem, assegure-se da configuração do ambiente e manuseio de banco de acordo com o repositório.</p>
 
