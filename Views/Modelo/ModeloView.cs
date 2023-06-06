@@ -1,19 +1,15 @@
 using Models;
-using Controllers;
-
-<<<<<<< HEAD
-        
+using Controllers;        
         
 namespace Views{
     public class ListModelo : From{
-=======
+
 // namespace Views{
 //     public class ListModelo : From{
->>>>>>> 395ddfe4c1e11b0058fabd747f7fb5d2b86c94c7
 
         public enum option {Upgrade, Delete}
 
-<<<<<<< HEAD
+
         ListView ListModelo;
 
         private void AddListView(Models.ModeloModels produto){
@@ -21,7 +17,7 @@ namespace Views{
         string[]row = {
 
             modelo.id.ToString(),
-            modelo.Modelo 
+            modelo.Modelo.ToString(),/// 
             };
 
             ListViewItem item = new ListViewItem(row);
@@ -30,7 +26,7 @@ namespace Views{
         public void RefreshList()
         {
             // TODO> Criar lista
-=======
+
 //         ListView ListModelo;
 
 //         private void AddListView(Models.ModeloModels produto){
@@ -48,11 +44,9 @@ namespace Views{
 //         public void RefreshList()
 //         {
 //             listModelo.Items.Clear();
->>>>>>> 395ddfe4c1e11b0058fabd747f7fb5d2b86c94c7
 
             List<Models.ModeloModels> list = Controllers.ModeloController.Read();
 
-<<<<<<< HEAD
             foreach (Models.ProdutoModels produto in list)
             {
                 AddListView(modelo);
@@ -60,7 +54,7 @@ namespace Views{
         }
     }
 }
-=======
+
 //             foreach (Models.ProdutoModels produto in list)
 //             {
 //                 AddListView(modelo);
@@ -70,4 +64,4 @@ namespace Views{
     
 //     }
 // }
->>>>>>> 395ddfe4c1e11b0058fabd747f7fb5d2b86c94c7
+
