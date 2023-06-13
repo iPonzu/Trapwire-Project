@@ -18,7 +18,7 @@ namespace Views{
         //         MessageBox.Show("Criando Modelo");
         //         return;
         //     }else{
-        //         Models.ModeloModels modelo = new ModeloModels(
+        //         Models.Modelo modelo = new Modelo(
         //             txtmodelo.Text
         //         );
 
@@ -28,7 +28,7 @@ namespace Views{
         //         // clearform();
         //     }
 
-        //     // List<ModeloModels> ModeloList = ModeloController.Read();
+        //     // List<Modelo> ModeloList = ModeloController.Read();
         //     // if(ModeloList == null)
         //     // {
         //     //     ModeloList.refreshList();
