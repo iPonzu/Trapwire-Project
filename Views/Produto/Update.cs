@@ -4,7 +4,7 @@ using System;
 
 namespace Views{
 
-    public class ProdutoUpgrade : Form{
+    public class Update : Form{
 
         public Label lblid;
         public TextBox txtid;
@@ -14,10 +14,10 @@ namespace Views{
         public TextBox txtcategoria;
         public Button btCadt;
 
-        public ProdutoModels produto;
+        public Produto produto;
 
         private void btnCadt_Click(object sender, EventArgs e){
-            ProdutoModels produtoToEdit = this.produto;
+            Produto produtoToEdit = this.produto;
         }
     }
 }

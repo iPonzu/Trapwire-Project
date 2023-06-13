@@ -4,7 +4,7 @@ using System;
 
 namespace Views{
 
-    public class ModeloUpgrade : Form{
+    public class ModeloUpdate : Form{
 
         public Label lblid;
         public TextBox txtid;
@@ -14,7 +14,7 @@ namespace Views{
 
         public ModeloModels modelo;
 
-        private void btnCadt_Click(object sender, EventArgs e){
+        private void btModelo_Click(object sender, EventArgs e){
             ModeloModels modeloToEdit = this.modelo;
         }
     }
