@@ -4,7 +4,7 @@ using System;
 
 namespace Views{
 
-    public class ProdutoUpdate : Form{
+    public class MarcaUpdate : Form{
 
         public Label lblidproduto;
         public TextBox txtidproduto;
@@ -12,12 +12,12 @@ namespace Views{
         public TextBox txtmarca;
         public Label lblcategoria;
         public TextBox txtcategoria;
-        public Button btCadtProduto;
+        public Button btCadtMarca;
 
-        public ProdutoModels produto;
+        public MarcaModels marca;
 
         private void btCadt_Click(object sender, EventArgs e){
-            ProdutoModels produtoToEdit = this.produto;
+            MarcaModels marcaToEdit = this.marca;
         }
     }
 }

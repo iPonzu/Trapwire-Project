@@ -12,34 +12,6 @@ namespace Views{
         public TextBox txtmodelo;
         public Button btModelo;
 
-        // public void btModelo_Click()
-        // {
-        //     if(txtidmodelo.Text == "" || txtmodelo.Text == "" ){
-        //         MessageBox.Show("Criando Modelo");
-        //         return;
-        //     }else{
-        //         Models.Modelo modelo = new Modelo(
-        //             txtmodelo.Text
-        //         );
-
-        //         ModeloController modeloController = new ModeloController();
-
-        //         MessageBox.Show("Modelo cadasdtrado!");
-        //         // clearform();
-        //     }
-
-        //     // List<Modelo> ModeloList = ModeloController.Read();
-        //     // if(ModeloList == null)
-        //     // {
-        //     //     ModeloList.refreshList();
-        //     // }
-        //     // this.Close();
-        // }
-        // private void clearform()
-        // {
-        //     txtidmodelo.Clear();
-        //     txtmodelo.Clear();
-        // }
 
         public ModeloCreate()
         {

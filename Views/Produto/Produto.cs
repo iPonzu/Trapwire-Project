@@ -14,7 +14,8 @@ namespace Views{
 
                 produto.Id.ToString(),
                 produto.Marcaid.ToString(),
-                produto.Categoriaid.ToString()
+                produto.Categoriaid.ToString(),
+                produto.Modeloid.ToString(),
             };
 
             ListViewItem item = new ListViewItem(row);

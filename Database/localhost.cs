@@ -6,6 +6,7 @@ using Models;
 namespace MyData{
     public class Context : DbContext{
 
+        public string connection = "Server=localhost;User Id=root;Database=trapwire";
         public DbSet<CategoriaModels> Categorias { get; set; }
         
         public DbSet<ModeloModels> Modelos { get; set; }
@@ -21,10 +22,7 @@ namespace MyData{
         public DbSet<EstoqueModels> Estoques { get; set; }
 
         
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var connectionString = "server=localhost;database=trapwiresql;user=root;";
-            optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+            => options.UseMySql(connection, ServerVersion.AutoDetect(connection));    
     }
 }

@@ -5,7 +5,7 @@ namespace Models{
     public class FornecedorModels{
         [Column("ID Fornecedor")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }
+        public int Id { get; set; }
         [Column("Nome: ")]
         public string Nome { get; set; }
         [Column("Nome Social: ")]
