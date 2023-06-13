@@ -6,7 +6,7 @@ namespace index{
         public static void Main(string[] args){
             // Menu.index();
             Application.EnableVisualStyles();
-            Application.Run(new ProdutoCreate());
+            Application.Run(new Create());
         }
     }
 }

@@ -4,7 +4,7 @@ using System;
 
 namespace Views{
 
-    public class ProdutoUpgrade : Form{
+    public class Update : Form{
 
         public Label lblid;
         public TextBox txtid;

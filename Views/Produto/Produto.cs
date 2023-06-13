@@ -2,7 +2,7 @@ using Models;
 using Controllers;
 
 namespace Views{
-    public class ListProduto : Form {
+    public class Produto : Form {
 
         public enum option {Upgrade, Delete}
 
