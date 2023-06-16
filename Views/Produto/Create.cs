@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Views{
 
-    public class Create : Form {
+    public class ProdutoCreate : Form {
         
         public Label lblidprod;
         public TextBox txtidprod;
@@ -14,9 +14,9 @@ namespace Views{
         public TextBox txtproduto;
         public Label lblcategoria;
         public TextBox txtcategoria;
-        public Button btProduto;
+        public Button btProdutoCreate;
 
-        public Create()
+        public ProdutoCreate()
         {
             Text = "Registrar Produto";
             StartPosition = FormStartPosition.CenterScreen;
@@ -64,13 +64,10 @@ namespace Views{
             txtcategoria.Size = new Size(150, 20);
 
             /* buttons */
-            btProduto = new Button();
-            btProduto.Text = "Cadastrar";
-            btProduto.Location = new Point(10, 150);
-            btProduto.Size = new Size(70, 20);
-
-
-
+            btProdutoCreate = new Button();
+            btProdutoCreate.Text = "Cadastrar";
+            btProdutoCreate.Location = new Point(10, 150);
+            btProdutoCreate.Size = new Size(70, 20);
 
             Controls.Add(lblidprod);
             Controls.Add(txtidprod);
@@ -80,7 +77,7 @@ namespace Views{
             Controls.Add(txtcategoria);
             Controls.Add(lblproduto);
             Controls.Add(txtproduto);
-            Controls.Add(btProduto);
+            Controls.Add(btProdutoCreate);
         }
     }   
 }

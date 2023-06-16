@@ -5,6 +5,8 @@ namespace Views{
     public class MarcaView : Form{
         public enum Option {Upgrade, Delete}
 
+        ListView marca;
+
         private void AddListView(MarcaModels modelo){
             string[] row = {
                 modelo.Id.ToString(),

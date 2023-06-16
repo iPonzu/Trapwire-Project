@@ -3,55 +3,54 @@ using Models;
 using System.Windows.Forms;
 
 namespace Views{
-
     public class MarcaCreate : Form{
-        
         public Label lblidmarca;
         public TextBox txtidmarca;
-        public Label lblmarca;
-        public TextBox txtmarca;
-        public Button btMarca;
+        public Label lblmarcanome;
+        public TextBox txtmarcanome;
+        public Button btMarcaCreate;
 
         public MarcaCreate()
         {
-            this.Text = "Registrar Marca";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Size = new System.Drawing.Size(280, 360);
+            Text = "Registrar Marca";
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Size = new System.Drawing.Size(251,200);
 
-            this.lblidmarca = new Label();
-            this.lblidmarca.Text = "ID:";
-            this.lblidmarca.Location = new Point(10, 50); // Horizontal, Vertical
-            this.lblidmarca.Size = new Size(50, 20); // Largura, Altura
+            lblidmarca = new Label();
+            lblidmarca.Text = "ID:";
+            lblidmarca.Location = new Point(10, 20);
+            lblidmarca.Size = new Size(20, 20);   
 
-            this.txtidmarca = new TextBox();  
-            this.txtidmarca.Location = new Point(80, 40);
-            this.txtidmarca.Size = new Size(150, 20);
+            txtidmarca = new TextBox();  
+            txtidmarca.Location = new Point(80, 20);
+            txtidmarca.Size = new Size(50, 30);
 
-            this.lblmarca = new Label();
-            this.lblmarca.Text = "Marca:";
-            this.lblidmarca.Location = new Point(10, 70);
-            this.lblidmarca.Size = new Size(50, 20);
+            lblmarcanome = new Label();
+            lblmarcanome.Text = "Nome:";
+            lblmarcanome.Location = new Point(10, 50);
+            lblmarcanome.Size = new Size(50, 20);
+            
+            txtmarcanome = new TextBox();
+            txtmarcanome.Location = new Point(80, 50);
+            txtmarcanome.Size = new Size(100, 20);
 
-            this.txtmarca = new TextBox();
-            this.txtmarca.Location = new Point(80, 70);
-            this.txtmarca.Size = new Size(150, 20);
+            btMarcaCreate = new Button();
+            btMarcaCreate.Text = "Cadastrar";
+            btMarcaCreate.Location = new Point(10, 100);
+            btMarcaCreate.Size = new Size(70, 20);
 
-            this.btMarca = new Button();
-            this.btMarca.Text = "Cadastrar";
-            this.btMarca.Location = new Point(10, 130);
-            this.btMarca.Size = new Size(70, 20);
+            Controls.Add(lblidmarca);
+            Controls.Add(txtidmarca);
+            Controls.Add(lblmarcanome);           
+            Controls.Add(txtmarcanome);
+            Controls.Add(btMarcaCreate);
+            
 
-
-            this.Controls.Add(this.lblidmarca);
-            this.Controls.Add(this.txtidmarca);
-            this.Controls.Add(this.lblmarca);
-            this.Controls.Add(this.txtmarca);
-            this.Controls.Add(this.btMarca);
         }
     }
 }

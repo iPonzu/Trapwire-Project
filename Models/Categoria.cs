@@ -5,6 +5,7 @@ using MyData;
 namespace Models{
     public class CategoriaModels{
         [Column("ID Categoria")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

@@ -6,6 +6,7 @@ namespace Models{
     public class ProdutoModels{
 
         [Column("ID Produto")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get;set; }
         [Column("Marca")]

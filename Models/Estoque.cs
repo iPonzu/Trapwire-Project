@@ -5,6 +5,7 @@ namespace Models{
     public class EstoqueModels{
 
         [Column("ID Estoque")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column("Nome do estoque: ")]

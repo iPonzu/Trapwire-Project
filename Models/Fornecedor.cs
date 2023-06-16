@@ -4,6 +4,7 @@ using MyData;
 namespace Models{
     public class FornecedorModels{
         [Column("ID Fornecedor")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column("Nome: ")]

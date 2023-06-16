@@ -4,10 +4,12 @@ using MyData;
 namespace Models{
     public class ModeloModels{
         [Column("ID Modelo")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column("Modelo: ")]
+        [Column("Nome: ")]
         public string Nome { get; set;}
+        public int marcaid {get; set;}
 
         public ModeloModels(string nome){
             this.Nome = nome;
@@ -44,5 +46,8 @@ namespace Models{
                 return modelo;
             }   
         }  
+        internal void RefreshList(){
+            throw new NotImplementedException();
+        }
     } 
 }       
