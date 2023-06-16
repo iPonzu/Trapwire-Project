@@ -15,7 +15,7 @@ namespace Controllers{
             try{
                 id = int.Parse(idRef);
             } catch(Exception e){
-                throw new Exception("ID inválido");
+                throw new Exception ("ID Inválido");
             }
             ModeloModels modelo = ModeloModels.ReadById(id);
             if(modelo == null){
@@ -25,7 +25,7 @@ namespace Controllers{
                 modelo.Nome = nome;
             }
             ModeloModels.Update(modelo);
-        }
+        }   
 
         public static List<ModeloModels> Read(){
             return ModeloModels.Read();

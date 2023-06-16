@@ -4,6 +4,7 @@ using MyData;
 namespace Models{
     public class LogisticaModels{
         [Column("ID Logistica")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column("Data: ")]
