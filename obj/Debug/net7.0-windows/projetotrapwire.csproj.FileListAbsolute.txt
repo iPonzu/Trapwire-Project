@@ -90,3 +90,11 @@ C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\MySql.Data.EntityFramewo
 C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Renci.SshNet.dll
 C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\SshNet.Security.Cryptography.dll
 C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\System.Xml.XPath.XmlDocument.dll
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.csproj.AssemblyReference.cache
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfoInputs.cache
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfo.cs
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.csproj.CoreCompileInputs.cache
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.dll
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\refint\projetotrapwire.dll
+C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.pdb

@@ -3,15 +3,12 @@ using Controllers;
 
 namespace Views{
     public class ProdutoView : Form {
-
         public enum option {Upgrade, Delete}
 
         ListView ListProdutoView;
 
         private void AddListView(Models.ProdutoModels produto){
-
             string[]row = {
-
                 produto.Id.ToString(),
                 produto.Marcaid.ToString(),
                 produto.Categoriaid.ToString(),
@@ -28,9 +25,7 @@ namespace Views{
             // listProduto.Items.Clear();
 
             List<Models.ProdutoModels> list = ProdutoController.Read();
-
-            foreach (Models.ProdutoModels produto in list)
-            {
+            foreach (Models.ProdutoModels produto in list){
                 AddListView(produto);
             }
         }

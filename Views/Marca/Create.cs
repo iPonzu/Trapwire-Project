@@ -3,7 +3,9 @@ using Models;
 using System.Windows.Forms;
 
 namespace Views{
+
     public class MarcaCreate : Form{
+        
         public Label lblidmarca;
         public TextBox txtidmarca;
         public Label lblmarcanome;
@@ -50,7 +52,6 @@ namespace Views{
             Controls.Add(txtmarcanome);
             Controls.Add(btMarcaCreate);
             
-
         }
     }
 }
