@@ -3,14 +3,14 @@ using MyData;
 
 namespace Controllers{
     public class FornecedorController{
-        public void Create(string nome, string nomeSocial, string cnpj, string endereco, string telefone){
+        public static void Create(string nome, string nomeSocial, string cnpj, string endereco, string telefone){
             if (nome == null || nomeSocial.Length == 0 || nomeSocial == null || nomeSocial.Length == 0 || cnpj == null || cnpj.Length == null || endereco == null || endereco.Length == 0 || telefone == null || telefone.Length == 0){
                 throw new Exception("Fornecedor inválido");
             }
             new FornecedorModels(nome, nomeSocial, cnpj, endereco, telefone);
         }
         
-         public void Update(string idRef, string nome, string nomeSocial, string cnpj, string endereco, string telefone){
+         public static void Update(string idRef, string nome, string nomeSocial, string cnpj, string endereco, string telefone){
             int id = 0;
             try{
                 id = int.Parse(idRef);
@@ -30,6 +30,20 @@ namespace Controllers{
             }
 
             FornecedorModels.Update(fornecedor);
+        }
+        public static void Delete(string idRef){
+            int id = 0;
+            try{
+                id = int.Parse(idRef);
+            }catch (Exception e){
+                throw new Exception("ID inválido");
+            }
+            FornecedorModels fornecedor = FornecedorModels.ReadById(id);
+            if (fornecedor == null){
+                throw new Exception("Fornecedor inválido");
+            }
+
+            FornecedorModels.Delete(fornecedor);
         }
 
         public static List<FornecedorModels> Read(){

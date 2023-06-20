@@ -18,9 +18,21 @@ namespace Views{
         public TextBox txtquantidade;
         public Label lbltipo;
         public TextBox txttipo;
+        public Button btnCadLog;
 
-        public LogisticaCreate(){
-            
+        public void btCadLog_Click(object sender, EventArgs e){
+            if (txtidlogistica.Text == "" || txtidproduto.Text == "" || txtidarmazem.Text == "" || txtdata.Text == "" || txttipo.Text == ""){
+                MessageBox.Show("Preencha os campos");
+                return;
+            }else{
+                LogisticaController.Create(txtidlogistica.Text);
+                MessageBox.Show("Logistica criada com sucesso.");
+            }
+        }
+
+        public LogisticaCreate() {
+        
+        
         }
     }
 }

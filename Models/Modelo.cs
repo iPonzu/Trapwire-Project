@@ -30,7 +30,13 @@ namespace Models{
             using(var context = new Context()) {
                 context.Modelos.Update(modelo);
                 context.SaveChanges();
-
+                return modelo;
+            }
+        }
+        public static ModeloModels Delete(ModeloModels modelo){
+            using(var context = new Context()) {
+                context.Modelos.Remove(modelo);
+                context.SaveChanges();
                 return modelo;
             }
         }

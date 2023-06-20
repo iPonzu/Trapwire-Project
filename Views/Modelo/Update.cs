@@ -23,7 +23,7 @@ namespace Views{
                 MessageBox.Show("Preencha os campos!");
                 return;
             }else{
-                ModeloController.Update(modeloToUpdate);
+                ModeloModels.Update(modeloToUpdate);
                 MessageBox.Show("Modelo modificado.");
             }
             

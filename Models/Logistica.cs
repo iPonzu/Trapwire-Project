@@ -35,7 +35,13 @@ namespace Models{
             using (var context = new Context()){
                 context.Logisticas.Update(logistica);
                 context.SaveChanges();
-
+                return logistica;
+            }
+        }
+        public static LogisticaModels Delete(LogisticaModels logistica){
+            using(var context = new Context()){
+                context.Logisticas.Remove(logistica);
+                context.SaveChanges();
                 return logistica;
             }
         }

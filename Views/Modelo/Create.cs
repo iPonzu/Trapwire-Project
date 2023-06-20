@@ -11,21 +11,14 @@ namespace Views{
         public Label lblmodelo;
         public TextBox txtNomemodelo;
         public Button btCadModelo;
-
-
+        
           public void btCadModelo_Click(object sender, EventArgs e) {
             if (txtNomemodelo.Text == "") {
                 MessageBox.Show("Preencha os campos");
                 return;
             } else {
-                ModeloModels modelo = new ModeloModels(
-                    Convert.ToString(txtNomemodelo)
-                    );
-                ModeloController controller = new ModeloController();
-                ModeloController.Create(modelo);
-
-                MessageBox.Show("Modelo criado com sucesso");
-                
+                ModeloController.Create(txtNomemodelo.Text);
+                MessageBox.Show("Modelo criado com sucesso");  
             }
         }
 

@@ -30,11 +30,17 @@ namespace Models{
         }
 
        
-       public static EstoqueModels Update(EstoqueModels estoque){
+        public static EstoqueModels Update(EstoqueModels estoque){
             using(var context = new Context()) {
                 context.Estoques.Update(estoque);
                 context.SaveChanges();
-
+                return estoque;
+            }
+        }
+        public static EstoqueModels Delete(EstoqueModels estoque){
+            using(var context = new Context()){
+                context.Estoques.Remove(estoque);
+                context.SaveChanges();
                 return estoque;
             }
         }

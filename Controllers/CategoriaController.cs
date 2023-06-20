@@ -3,14 +3,14 @@ using MyData;
 
 namespace Controllers{
     public class CategoriaController{
-        public void Create(string nome){
+        public static void Create(string nome){
             if (nome == null || nome.Length == 0) {
                 throw new Exception("Nome inválido.");
             }
             new CategoriaModels(nome);
         }
 
-        public void Update(string idRef, string nome){
+        public static void Update(string idRef, string nome){
             int id = 0;
             try {
                 id = int.Parse(idRef);
@@ -27,6 +27,21 @@ namespace Controllers{
             }
 
             CategoriaModels.Update(categoria);
+        }
+        
+        public static void Delete(string idRef){
+            int id = 0;
+            try{
+                id = int.Parse(idRef);
+            } catch (Exception e) {
+                throw new Exception("ID inválido");
+            }
+            CategoriaModels categoria = CategoriaModels.ReadById(id);
+            if(categoria != null){
+                throw new Exception("Categoria inválida");
+            }
+            
+            CategoriaModels.Delete(categoria);
         }
 
         public static List<CategoriaModels> Read(){

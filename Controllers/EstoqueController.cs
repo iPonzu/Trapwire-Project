@@ -8,7 +8,7 @@ namespace Controllers{
                 throw new Exception("Estoque não encontrado");
             }
         }
-        public void Update(string idRef, string nome, string endereco){
+        public static void Update(string idRef, string nome, string endereco){
             int id = 0;
             try{
                 id = int.Parse(idRef);
@@ -25,6 +25,20 @@ namespace Controllers{
             }
             EstoqueModels.Update(estoque);
         }
+        public static void Delete(string idRef){
+            int id = 0;
+            try{
+                id = int.Parse(idRef);
+            } catch (Exception e){
+                throw new Exception ("ID Inválido.");
+            }
+            EstoqueModels estoque = EstoqueModels.ReadById(id);
+            if(estoque == null){
+                throw new Exception("Estoque inválido.");
+            }
+            EstoqueModels.Delete(estoque);
+        }
+        
         public static List<EstoqueModels> Read(){
             return EstoqueModels.Read();
         }

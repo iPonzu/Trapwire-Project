@@ -10,7 +10,6 @@ namespace Views{
         private void AddListView(Models.ProdutoModels produto){
             string[]row = {
                 produto.Id.ToString(),
-                produto.Marcaid.ToString(),
                 produto.Categoriaid.ToString(),
                 produto.Modeloid.ToString(),
             };

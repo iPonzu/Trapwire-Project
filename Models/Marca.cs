@@ -31,11 +31,16 @@ namespace Models{
             using (var context = new Context()){
                 context.Marcas.Update(marca);
                 context.SaveChanges();
-
-
                 return marca;
             }
-        }        
+        } 
+        public static MarcaModels Delete(MarcaModels marca){
+            using (var context = new Context()){
+                context.Marcas.Remove(marca);
+                context.SaveChanges();
+                return marca;
+            }
+        }     
         public static List<MarcaModels> Read(){
             using (var context = new Context()){
                 return context.Marcas.ToList();

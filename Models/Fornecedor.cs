@@ -40,10 +40,16 @@ namespace Models{
             using(var context = new Context()) {
                 context.Fornecedores.Update(fornecedor);
                 context.SaveChanges();
-
                 return fornecedor;
             }
-        }    
+        }
+        public static FornecedorModels Delete(FornecedorModels fornecedor){
+            using(var context = new Context()){
+                context.Fornecedores.Remove(fornecedor);
+                context.SaveChanges();
+                return fornecedor;
+            }
+        }
         public static List<FornecedorModels> Read(){
             using (var context = new Context()){
                 return context.Fornecedores.ToList();

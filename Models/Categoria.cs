@@ -44,7 +44,13 @@ namespace Models{
             using(var context = new Context()) {
                 context.Categorias.Update(categoria);
                 context.SaveChanges();
-
+                return categoria;
+            }
+        }
+        public static CategoriaModels Delete(CategoriaModels categoria){
+            using(var context = new Context()){
+                context.Categorias.Remove(categoria);
+                context.SaveChanges();
                 return categoria;
             }
         }

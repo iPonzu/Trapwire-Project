@@ -9,15 +9,12 @@ namespace Models{
         [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get;set; }
-        [Column("Marca")]
-        public string Marcaid { get; set; }
         [Column("Modelo")]
         public string Modeloid { get; set; }
         [Column("Categoria")]
         public string Categoriaid { get; set; }
 
-        public ProdutoModels(string marcaid, string modeloid, string categoriaid){
-            this.Marcaid = marcaid;
+        public ProdutoModels(string modeloid, string categoriaid){
             this.Modeloid = modeloid;
             this.Categoriaid = categoriaid;
 
@@ -36,7 +33,13 @@ namespace Models{
             using(var context = new Context()) {
                 context.Produtos.Update(produto);
                 context.SaveChanges();
-
+                return produto;
+            }
+        }
+        public static ProdutoModels Delete(ProdutoModels produto){
+            using(var context = new Context()){
+                context.Produtos.Remove(produto);
+                context.SaveChanges();
                 return produto;
             }
         }
