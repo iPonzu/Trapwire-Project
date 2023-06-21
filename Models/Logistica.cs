@@ -8,13 +8,13 @@ namespace Models{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [Column("Data: ")]
-        public DateTime Data { get; set; }
+        public string Data { get; set; }
         [Column("Quantidade: ")]
         public int Quantidade { get; set; }
         public string Produtoid { get; set; }
         public string Estoqueid { get; set; }
 
-        public LogisticaModels(DateTime data, int quantidade, string produtoid, string estoqueid){
+        public LogisticaModels(string data, int quantidade, string produtoid, string estoqueid){
             this.Data = data;
             this.Quantidade = quantidade;
             this.Produtoid = produtoid;

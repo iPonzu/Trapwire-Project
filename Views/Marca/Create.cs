@@ -9,8 +9,18 @@ namespace Views{
         public Label lblidmarca;
         public TextBox txtidmarca;
         public Label lblmarcanome;
-        public TextBox txtmarcanome;
-        public Button btMarcaCreate;
+        public TextBox txtMarcanome;
+        public Button btCadMarca;
+
+
+        public void btCadMarca_Click(object sender, EventArgs e){
+            if(txtMarcanome.Text == ""){
+                MessageBox.Show("Preencha os campos");
+                return;
+            } else{
+                MarcaController.Create(txtMarcanome.Text);
+            }
+        }
 
         public MarcaCreate()
         {
@@ -37,20 +47,20 @@ namespace Views{
             lblmarcanome.Location = new Point(10, 50);
             lblmarcanome.Size = new Size(50, 20);
             
-            txtmarcanome = new TextBox();
-            txtmarcanome.Location = new Point(80, 50);
-            txtmarcanome.Size = new Size(100, 20);
+            txtMarcanome = new TextBox();
+            txtMarcanome.Location = new Point(80, 50);
+            txtMarcanome.Size = new Size(100, 20);
 
-            btMarcaCreate = new Button();
-            btMarcaCreate.Text = "Cadastrar";
-            btMarcaCreate.Location = new Point(10, 100);
-            btMarcaCreate.Size = new Size(70, 20);
+            btCadMarca = new Button();
+            btCadMarca.Text = "Cadastrar";
+            btCadMarca.Location = new Point(10, 100);
+            btCadMarca.Size = new Size(70, 20);
 
             Controls.Add(lblidmarca);
             Controls.Add(txtidmarca);
             Controls.Add(lblmarcanome);           
-            Controls.Add(txtmarcanome);
-            Controls.Add(btMarcaCreate);
+            Controls.Add(txtMarcanome);
+            Controls.Add(btCadMarca);
             
         }
     }

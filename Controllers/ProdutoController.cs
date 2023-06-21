@@ -22,8 +22,7 @@ namespace Controllers{
             }
             if(modeloid != null && modeloid.Length > 0 || categoriaid != null && categoriaid.Length > 0){
                 produto.Modeloid = modeloid;
-                produto.Categoriaid = categoriaid;
-                
+                produto.Categoriaid = categoriaid;  
             }
 
             ProdutoModels.Update(produto);

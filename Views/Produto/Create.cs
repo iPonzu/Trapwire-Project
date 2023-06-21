@@ -7,22 +7,22 @@ namespace Views{
     public class ProdutoCreate : Form {
         
         public Label lblidprod;
-        public TextBox txtidprod;
-        public Label lblmarca;
-        public TextBox txtmarca;
+        public TextBox txtidProd;
+        public Label lblModelo;
+        public TextBox txtModelo;
         public Label lblproduto;
-        public TextBox txtproduto;
+        public TextBox txtProduto;
         public Label lblcategoria;
-        public TextBox txtcategoria;
+        public TextBox txtCategoria;
         public Button btCadProduto;
 
-        public void btCadProduto_Click(object sender, EventArgs e){
-            if(txtproduto.Text == ""){
+        public void btCadProduto_Click(object sender, EventArgs e) {
+            if (txtProduto.Text == "" || txtModelo.Text == "" || txtCategoria.Text == "") {
                 MessageBox.Show("Preencha os campos");
                 return;
-            }else{
-                ProdutoController.Create(txtproduto.Text);
-                MessageBox.Show("Produto criado com sucesso.");
+            } else {
+                ProdutoController.Create(txtModelo.Text, txtCategoria.Text);
+                MessageBox.Show("Produto criado com sucesso");  
             }
         }
 
@@ -42,52 +42,52 @@ namespace Views{
             lblidprod.Location = new Point(10, 20); // Horizontal, Vertical
             lblidprod.Size = new Size(20, 20); // Largura, Altura
         
-            txtidprod = new TextBox();  
-            txtidprod.Location = new Point(80, 20);
-            txtidprod.Size = new Size(50, 30);
+            txtidProd = new TextBox();  
+            txtidProd.Location = new Point(80, 20);
+            txtidProd.Size = new Size(50, 30);
 
-            lblmarca = new Label();
-            lblmarca.Text = "Marca:";
-            lblmarca.Location = new Point(10, 50);
-            lblmarca.Size = new Size(50, 20);
+            lblModelo = new Label();
+            lblModelo.Text = "Marca:";
+            lblModelo.Location = new Point(10, 50);
+            lblModelo.Size = new Size(50, 20);
 
-            txtmarca = new TextBox();
-            txtmarca.Location = new Point(80, 50);
-            txtmarca.Size = new Size(100, 20);
+            txtModelo = new TextBox();
+            txtModelo.Location = new Point(80, 50);
+            txtModelo.Size = new Size(100, 20);
 
             lblproduto = new Label();
             lblproduto.Text = "Modelo:";
             lblproduto.Location = new Point(10, 80);
             lblproduto.Size = new Size(50, 20);
 
-            txtproduto = new TextBox();
-            txtproduto.Location = new Point(80, 80);
-            txtproduto.Size = new Size(80, 20);
+            txtProduto = new TextBox();
+            txtProduto.Location = new Point(80, 80);
+            txtProduto.Size = new Size(80, 20);
 
             lblcategoria = new Label();
             lblcategoria.Text = "Categoria:";
             lblcategoria.Location = new Point(10, 110);
             lblcategoria.Size = new Size(70, 20);
 
-            txtcategoria = new TextBox();
-            txtcategoria.Location = new Point(80, 110);
-            txtcategoria.Size = new Size(150, 20);
+            txtCategoria = new TextBox();
+            txtCategoria.Location = new Point(80, 110);
+            txtCategoria.Size = new Size(150, 20);
 
             /* buttons */
-            btProdutoCreate = new Button();
-            btProdutoCreate.Text = "Cadastrar";
-            btProdutoCreate.Location = new Point(10, 150);
-            btProdutoCreate.Size = new Size(70, 20);
+            btCadProduto = new Button();
+            btCadProduto.Text = "Cadastrar";
+            btCadProduto.Location = new Point(10, 150);
+            btCadProduto.Size = new Size(70, 20);
 
             Controls.Add(lblidprod);
-            Controls.Add(txtidprod);
-            Controls.Add(lblmarca);
-            Controls.Add(txtmarca);
+            Controls.Add(txtidProd);
+            Controls.Add(lblModelo);
+            Controls.Add(txtModelo);
             Controls.Add(lblcategoria);
-            Controls.Add(txtcategoria);
+            Controls.Add(txtCategoria);
             Controls.Add(lblproduto);
-            Controls.Add(txtproduto);
-            Controls.Add(btProdutoCreate);
+            Controls.Add(txtProduto);
+            Controls.Add(btCadProduto);
         }
     }   
 }

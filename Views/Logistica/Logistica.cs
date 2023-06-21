@@ -3,7 +3,7 @@ using Controllers;
 
 namespace Views{
     public class LogisticaView : Form{
-        public enum Option {Upgrade, Delete}
+        public enum Option {Update, Delete}
 
         ListView ListLogistica;
 

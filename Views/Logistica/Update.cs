@@ -4,7 +4,7 @@ using System;
 
 namespace Views {
 
-    public class LogisticaUpgrade : Form {
+    public class LogisticaUpdate : Form {
 
         public Label lblnomelogistica;
         public TextBox txtnomelogistica;
@@ -18,11 +18,11 @@ namespace Views {
         public TextBox txtquantidade;
         public Label lbltipo;
         public TextBox txttipo;
-        public Button btnCadLog;
+        public Button btUpLog;
 
         public LogisticaModels Logistica;
 
-        private void btCadt_Click(object sender, EventArgs e) {
+        private void btUpLog_Click(object sender, EventArgs e) {
             LogisticaModels LogisticaToEdit = this.Logistica;
         }
     }
