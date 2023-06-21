@@ -14,7 +14,17 @@ namespace Views{
         public TextBox txtproduto;
         public Label lblcategoria;
         public TextBox txtcategoria;
-        public Button btProdutoCreate;
+        public Button btCadProduto;
+
+        public void btCadProduto_Click(object sender, EventArgs e){
+            if(txtproduto.Text == ""){
+                MessageBox.Show("Preencha os campos");
+                return;
+            }else{
+                ProdutoController.Create(txtproduto.Text);
+                MessageBox.Show("Produto criado com sucesso.");
+            }
+        }
 
         public ProdutoCreate()
         {

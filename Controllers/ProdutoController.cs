@@ -4,12 +4,12 @@ using MyData;
 namespace Controllers{
     public class ProdutoController{
         public static void Create(string modeloid, string categoriaid){
-            if (modeloid == null || categoriaid == null ||modeloid.Length == 0 || categoriaid.Length == 0){
+            if (modeloid == null || categoriaid == null){
                 throw new Exception("Produto Inválido.");
             }
-            new ProdutoModels(modeloid, categoriaid);
+            new ProdutoModels(modeloid , categoriaid);
         }
-        public static void Update(string idRef, string marcaid, string modeloid, string categoriaid){
+        public static void Update(string idRef, string modeloid, string categoriaid){
             int id = 0;
             try{
                 int.Parse(idRef);
@@ -48,5 +48,6 @@ namespace Controllers{
         public static ProdutoModels ReadById(int id){
             return ProdutoModels.ReadById(id);
         }
+
     }
 }    
