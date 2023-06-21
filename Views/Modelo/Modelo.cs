@@ -10,7 +10,7 @@ namespace Views{
         private void AddListView(Models.ModeloModels modelo){
             string[] row = {
                 modelo.Id.ToString(),
-                modelo.Nome.ToString(),
+                modelo.Nome.ToString()
             };
 
             ListViewItem item = new ListViewItem(row);
