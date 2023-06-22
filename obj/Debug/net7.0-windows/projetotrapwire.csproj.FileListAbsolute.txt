@@ -98,3 +98,11 @@ C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.dll
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\refint\projetotrapwire.dll
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.pdb
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.csproj.AssemblyReference.cache
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfoInputs.cache
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.AssemblyInfo.cs
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.csproj.CoreCompileInputs.cache
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.dll
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\refint\projetotrapwire.dll
+C:\Users\joao.franco\clone\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.pdb
