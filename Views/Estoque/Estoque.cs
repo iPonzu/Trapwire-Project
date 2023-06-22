@@ -12,5 +12,7 @@ namespace Views{
 
             };
         }
+
+        ListViewItem item = new ListViewItem(row);
     }
 }
