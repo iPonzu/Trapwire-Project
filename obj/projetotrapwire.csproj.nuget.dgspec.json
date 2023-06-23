@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj": {}
+    "C:\\Users\\joao.franco\\clone\\Trapwire-Project\\projetotrapwire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj": {
+    "C:\\Users\\joao.franco\\clone\\Trapwire-Project\\projetotrapwire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
+        "projectUniqueName": "C:\\Users\\joao.franco\\clone\\Trapwire-Project\\projetotrapwire.csproj",
         "projectName": "projetotrapwire",
-        "projectPath": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
-        "packagesPath": "C:\\Users\\joao_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao_\\projetotrapwire\\obj\\",
+        "projectPath": "C:\\Users\\joao.franco\\clone\\Trapwire-Project\\projetotrapwire.csproj",
+        "packagesPath": "C:\\Users\\joao.franco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joao.franco\\clone\\Trapwire-Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\joao_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\joao.franco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +47,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.5, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
