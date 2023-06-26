@@ -9,10 +9,14 @@ namespace Views{
 
         private void AddListView(Models.EstoqueModels estoque){
             string[] row = {
-
+                estoque.Id.ToString(),
+                estoque.Nome.ToString(),
+                estoque.Endereco.ToString(),
             };
+
+            ListViewItem item = new ListViewItem(row);
+
         }
 
-        ListViewItem item = new ListViewItem(row);
     }
 }

@@ -73,11 +73,13 @@ namespace Views{
             txtCategoria.Location = new Point(80, 110);
             txtCategoria.Size = new Size(150, 20);
 
-            /* buttons */
             btCadProduto = new Button();
             btCadProduto.Text = "Cadastrar";
             btCadProduto.Location = new Point(10, 150);
             btCadProduto.Size = new Size(70, 20);
+            btCadProduto.Click += (sender, e) =>{
+
+            };
 
             Controls.Add(lblidprod);
             Controls.Add(txtidProd);

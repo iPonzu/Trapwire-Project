@@ -9,7 +9,8 @@ namespace Views{
 
         private void AddListView(Models.CategoriaModels categoria){
             string[] row = {
-
+                categoria.Id.ToString(),
+                categoria.Nome.ToString()
             };
         }
     }

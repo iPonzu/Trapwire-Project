@@ -56,6 +56,11 @@ namespace Views{
             this.btCadModelo.Text = "Cadastrar";
             this.btCadModelo.Location = new Point(10, 130);
             this.btCadModelo.Size = new Size(70, 20);
+           this.btCadModelo.Click += (sender, e) =>{
+                ModeloModels modelo = new ModeloModels(txtNomemodelo.Text);
+                ModeloModels.Create(modelo);
+                this.Close();
+                };
 
 
             this.Controls.Add(this.lblidmodelo);

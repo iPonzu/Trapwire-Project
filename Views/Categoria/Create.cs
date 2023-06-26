@@ -6,15 +6,16 @@ namespace Views {
 
     public class CategoriaCreate : Form {
 
-        public label lblcategorianome
-        public TextBox txtcategorianome
+        public Label lblcategorianome;
+        public TextBox txtCategorianome;
+        public Button btCadCategoria;
 
         public void btCadCategoria_Click(object sender, EventArgs e) {
             if(txtCategorianome.Text == ""){
                 MessageBox.Show("Preencha o nome");
                 return;
             } else {
-                CategoriaController.Create(txtCategorianome.text)
+                CategoriaController.Create(txtCategorianome.Text);
             }
         }
 
@@ -34,17 +35,17 @@ namespace Views {
             lblcategorianome.Location = new Point(10, 50);
             lblcategorianome.Size = new Size(50, 20);
             
-            txtcategorianome = new TextBox();
-            txtcategorianome.Location = new Point(80, 50);
-            txtcategorianome.Size = new Size(100, 20);
+            txtCategorianome = new TextBox();
+            txtCategorianome.Location = new Point(80, 50);
+            txtCategorianome.Size = new Size(100, 20);
 
             btCadCategoria = new Button();
             btCadCategoria.Text = "Cadastrar";
             btCadCategoria.Location = new Point(10, 100);
             btCadCategoria.Size = new Size(70, 20);
 
-            Controls.Add(lblcategorianome)
-            Controls.Add(txtcategorianome)
+            Controls.Add(lblcategorianome);
+            Controls.Add(txtcategorianome);
         }
     }
 }

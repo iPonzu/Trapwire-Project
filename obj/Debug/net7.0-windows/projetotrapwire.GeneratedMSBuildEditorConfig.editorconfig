@@ -14,8 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = projetotrapwire
-<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\joao_\projetotrapwire\
-=======
-build_property.ProjectDir = C:\Users\joao.franco\clone\Trapwire-Project\
->>>>>>> 7bb12d95285ac6210803413237df018400987bf6
