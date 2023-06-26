@@ -6,7 +6,7 @@ namespace Views {
 
     public class CategoriaCreate : Form {
 
-        public Label lblcategorianome;
+        public Label lblCategorianome;
         public TextBox txtCategorianome;
         public Button btCadCategoria;
 
@@ -30,10 +30,10 @@ namespace Views {
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
             
-            lblcategorianome = new Label();
-            lblcategorianome.Text = "Nome:";
-            lblcategorianome.Location = new Point(10, 50);
-            lblcategorianome.Size = new Size(50, 20);
+            lblCategorianome = new Label();
+            lblCategorianome.Text = "Nome:";
+            lblCategorianome.Location = new Point(10, 50);
+            lblCategorianome.Size = new Size(50, 20);
             
             txtCategorianome = new TextBox();
             txtCategorianome.Location = new Point(80, 50);
@@ -44,8 +44,8 @@ namespace Views {
             btCadCategoria.Location = new Point(10, 100);
             btCadCategoria.Size = new Size(70, 20);
 
-            Controls.Add(lblcategorianome);
-            Controls.Add(txtcategorianome);
+            Controls.Add(lblCategorianome);
+            Controls.Add(txtCategorianome);
         }
     }
 }

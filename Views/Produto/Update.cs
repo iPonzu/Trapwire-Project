@@ -8,8 +8,8 @@ namespace Views{
 
         public Label lblidproduto;
         public TextBox txtidproduto;
-        public Label lblmarca;
-        public TextBox txtmarca;
+        public Label lblmodelo;
+        public TextBox txtmodelo;
         public Label lblcategoria;
         public TextBox txtcategoria;
         public Button btCadtProduto;
