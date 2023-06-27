@@ -9,9 +9,9 @@ namespace Models{
         public int Id { get; set; }
         [Column("Nome: ")]
         public string Nome { get; set;}
-        public int marcaid {get; set;}
+        public int Marcaid {get; set;}
 
-        public ModeloModels(string nome){
+        public ModeloModels(string nome) {
             this.Nome = nome;
 
             this.Create(this);

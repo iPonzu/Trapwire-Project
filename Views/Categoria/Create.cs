@@ -19,8 +19,7 @@ namespace Views {
             }
         }
 
-        public CategoriaCreate() 
-        {
+        public CategoriaCreate(){
             Text = "Registrar Categoria";
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;

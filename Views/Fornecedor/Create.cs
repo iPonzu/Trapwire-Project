@@ -23,11 +23,13 @@ namespace Views{
                 MessageBox.Show("Preencha os campos");
                 return;
             }else{
-                FornecedorController.Create(txtNomefornecedor.Text, txtNomeSocial.Text);
+                FornecedorController.Create(txtNomefornecedor.Text,txtNomeSocial.Text, txtEndereco.Text, txtTelefone.Text, txtcnpj.Text);
             }
-        }
-        
+        } 
+
+        public FornecedorCreate(){
+            
+        }   
 
     }
-
 }

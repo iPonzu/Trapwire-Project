@@ -3,7 +3,7 @@ using MyData;
 
 namespace Controllers{
     public class EstoqueController{
-        public void Create(string nome, string endereco){
+        public static void Create(string nome, string endereco){
             if(nome == null || nome.Length == 0 || endereco == null || endereco.Length == 0){
                 throw new Exception("Estoque não encontrado");
             }

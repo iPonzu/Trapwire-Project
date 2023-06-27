@@ -7,10 +7,11 @@ namespace Controllers{
             if(data == null && quantidade == null && produtoid == null && produtoid.Length > 0 && estoqueid == null && estoqueid.Length > 0){
                 throw new Exception("Logistica não identificada.");
             }
-            new LogisticaModels(data, quantidade, produtoid, estoqueid);
+            new LogisticaModels(data, quantidade, produtoid, estoqueid); 
+   
         }
 
-        public static void Update(string idRef, string data, string quantidade, string produtoid, string estoqueid){
+        public static void Update(string idRef, string data, int quantidade, string produtoid, string estoqueid){
             int id = 0;
             try{
                 id = int.Parse(idRef);
@@ -23,7 +24,7 @@ namespace Controllers{
             }
             if(data == null && quantidade == null && produtoid != null && produtoid.Length > 0 && estoqueid != null && estoqueid.Length > 0){
                 logistica.Data = data;
-                logistica.Quantidade = Convert.ToInt32(quantidade);
+                logistica.Quantidade = quantidade;
                 logistica.Produtoid = produtoid;
                 logistica.Estoqueid = estoqueid;    
             }

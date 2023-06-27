@@ -12,8 +12,7 @@ namespace Models{
 
         public MarcaModels(string nome) {
             this.Nome = nome;
-
-
+            
             this.Create(this);
         }
 
