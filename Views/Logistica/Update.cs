@@ -18,11 +18,11 @@ namespace Views {
         public TextBox txtquantidade;
         public Label lbltipo;
         public TextBox txttipo;
-        public Button btUpLog;
+        public Button btUpdateLog;
 
         public LogisticaModels Logistica;
 
-        private void btUpLog_Click(object sender, EventArgs e) {
+        private void btUpdateLog_Click(object sender, EventArgs e) {
             LogisticaModels LogisticaToEdit = this.Logistica;
         }
     }

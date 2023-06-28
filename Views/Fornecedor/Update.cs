@@ -17,11 +17,11 @@ namespace Views{
         public TextBox txtEndereco;
         public Label lblTelefone;
         public TextBox txtTelefone;
-        public Button btUpFornecedor;
+        public Button btUpdateFornecedor;
 
         public FornecedorModels fornecedor;
 
-        private void btUpFornecedor_Click(object sender, EventArgs e){
+        private void btUpdateFornecedor_Click(object sender, EventArgs e){
             FornecedorModels fornecedorToEdito = this.fornecedor;
         }
 

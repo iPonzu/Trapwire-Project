@@ -3,14 +3,14 @@ using MyData;
 
 namespace Controllers{
     public class CategoriaController{
-        public static void Create(string nome){
-            if (nome == null || nome.Length == 0) {
+        public static void Create(string Nome){
+            if (Nome == null || Nome.Length == 0) {
                 throw new Exception("Nome inválido.");
             }
-            new CategoriaModels(nome);
+            new CategoriaModels(Nome);
         }
 
-        public static void Update(string idRef, string nome){
+        public static void Update(string idRef, string Nome){
             int id = 0;
             try {
                 id = int.Parse(idRef);
@@ -22,8 +22,8 @@ namespace Controllers{
                 throw new Exception("Categoria inválido.");
             }
 
-            if (nome != null && nome.Length > 0) {
-                categoria.Nome = nome;
+            if (Nome != null && Nome.Length > 0) {
+                categoria.Nome = Nome;
             }
 
             CategoriaModels.Update(categoria);

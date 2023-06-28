@@ -9,11 +9,11 @@ namespace Views{
         public TextBox txtnomeEstoque;
         public Label lblenderecoEstoque;
         public TextBox txtenderecoEstoque;
-        public Button btUpEstoque;
+        public Button btUpdateEstoque;
 
         public EstoqueModels estoque;
 
-        private void btUpEstoque_Click(object sender, EventArgs e){
+        private void btUpdateEstoque_Click(object sender, EventArgs e){
             EstoqueModels estoque = this.estoque;
             
         }

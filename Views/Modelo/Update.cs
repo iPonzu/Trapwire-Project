@@ -10,11 +10,11 @@ namespace Views{
         public TextBox txtid;
         public Label lblmodelo;
         public TextBox txtNome;
-        public Button btUpdateModelo;
+        public Button btUpdatedateModelo;
 
         public ModeloModels modelo;
 
-        private void btUpdate_Click(object sender, EventArgs e){
+        private void btUpdatedate_Click(object sender, EventArgs e){
             ModeloModels modeloToUpdate = this.modelo;
             modeloToUpdate.Id = Convert.ToInt32(this.txtid.Text);
             modeloToUpdate.Nome = this.txtNome.Text;
