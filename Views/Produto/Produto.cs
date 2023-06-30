@@ -69,16 +69,55 @@ namespace Views{
         }
 
         public ProdutoView(){
-            Text = "Produtos";
-            StartPosition = FormStartPosition.CenterScreen;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            Size = new System.Drawing.Size(534, 383);
-        
+           this.Text = "Produtos";
+            this.Size = new Size(800, 450);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+
             ListProduto = new ListView();
+            ListProduto.Size = new Size(680, 260);
+            ListProduto.Location = new Point(50 ,50);
+            ListProduto.View = View.Details;
+            ListProduto.Columns.Add("ID");
+            ListProduto.Columns.Add("Nome");
+            ListProduto.Columns.Add("Modelo");
+            ListProduto.Columns.Add("Categoria");
+            ListProduto.FullRowSelect = true;
+            this.Controls.Add(ListProduto);
+
+            RefreshList();
+
+            Button btCad = new Button();
+            btCad.Text = "Cadastrar";
+            btCad.Size = new Size(100, 30);
+            btCad.Location = new Point(50, 330);
+            btCad.Click += new EventHandler(btCadProduto_Click);
+            this.Controls.Add(btCad);
+
+            Button btUpdate = new Button();
+            btUpdate.Text = "Editar";
+            btUpdate.Size = new Size(100, 30);
+            btUpdate.Location = new Point(170, 330);
+            btUpdate.Click += new EventHandler(btProdutoUpdate_Click);
+            this.Controls.Add(btUpdate);
+
+            Button btDelete = new Button();
+            btDelete.Text = "Excluir";
+            btDelete.Size = new Size(100, 30);
+            btDelete.Location = new Point(290, 330);
+            btDelete.Click += new EventHandler(btDelete_Click);
+            this.Controls.Add(btDelete);
+
+            Button btClose = new Button();
+            btClose.Text = "Voltar";
+            btClose.Size = new Size(100, 30);
+            btClose.Location = new Point(450, 330);
+            btClose.Click += new EventHandler(btClose_Click);
+            this.Controls.Add(btClose);
 
         
         }

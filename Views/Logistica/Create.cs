@@ -24,7 +24,21 @@ namespace Views{
                 return;
             }else{
                 LogisticaController.Create(txtDate.Text, int.Parse(txtQuantidade.Text) ,txtProduto.Text, txtEstoque.Text);
+                MessageBox.Show("Logistica cadastrada com sucesso");
+                ClearForm();
             }
+            LogisticaView logisticaList = Application.OpenForms.OfType<LogisticaView>().FirstOrDefault();
+            if(logisticaList != null){
+                logisticaList.RefreshList();
+            }
+            this.Close();
+        }
+
+        private void ClearForm(){
+            txtDate.Clear();
+            txtEstoque.Clear();
+            txtLog.Clear();
+            txtProduto.Clear();
         }
         
         public LogisticaCreate(){

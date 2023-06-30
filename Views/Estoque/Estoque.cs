@@ -13,6 +13,9 @@ namespace Views{
                 estoque.Nome.ToString(),
                 estoque.Endereco.ToString(),
             };
+
+            ListViewItem item = new ListViewItem(row);
+            ListEstoque.Items.Add(item);
         }
         public void RefreshList(){
             ListEstoque.Items.Clear();

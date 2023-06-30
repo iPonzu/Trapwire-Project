@@ -41,8 +41,8 @@ namespace Views {
                         
                     }
                     this.Close();
-                }catch (System.Exception ex){
-                    throw ex;
+                }catch (System.Exception err){
+                    throw err;
                 }
                 
             }

@@ -6,9 +6,7 @@ namespace Views{
 
     public class MarcaCreate : Form{
         
-        public Label lblidmarca;
-        public TextBox txtidmarca;
-        public Label lblmarcanome;
+        public Label lblMarcanome;
         public TextBox txtMarcanome;
         public Button btCadMarca;
 
@@ -19,7 +17,18 @@ namespace Views{
                 return;
             } else{
                 MarcaController.Create(txtMarcanome.Text);
+                MessageBox.Show("Marca cadastrada com sucesso.");
+                ClearForm();
             }
+            MarcaView marcaList = Application.OpenForms.OfType<MarcaView>().FirstOrDefault();
+            if(marcaList != null){
+                marcaList.RefreshList();
+            }
+            this.Close();
+        }
+
+        private void ClearForm(){
+            txtMarcanome.Clear();
         }
 
         public MarcaCreate()
@@ -33,19 +42,10 @@ namespace Views{
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
 
-            lblidmarca = new Label();
-            lblidmarca.Text = "ID:";
-            lblidmarca.Location = new Point(10, 20);
-            lblidmarca.Size = new Size(20, 20);   
-
-            txtidmarca = new TextBox();  
-            txtidmarca.Location = new Point(80, 20);
-            txtidmarca.Size = new Size(50, 30);
-
-            lblmarcanome = new Label();
-            lblmarcanome.Text = "Nome:";
-            lblmarcanome.Location = new Point(10, 50);
-            lblmarcanome.Size = new Size(50, 20);
+            lblMarcanome = new Label();
+            lblMarcanome.Text = "Nome:";
+            lblMarcanome.Location = new Point(10, 20);
+            lblMarcanome.Size = new Size(50, 30);
             
             txtMarcanome = new TextBox();
             txtMarcanome.Location = new Point(80, 50);
@@ -56,9 +56,7 @@ namespace Views{
             btCadMarca.Location = new Point(10, 100);
             btCadMarca.Size = new Size(70, 20);
 
-            Controls.Add(lblidmarca);
-            Controls.Add(txtidmarca);
-            Controls.Add(lblmarcanome);           
+            Controls.Add(lblMarcanome);           
             Controls.Add(txtMarcanome);
             Controls.Add(btCadMarca);
             

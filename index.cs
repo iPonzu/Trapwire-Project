@@ -1,12 +1,11 @@
-/* testing zone */
-
 using Views;
 
-namespace index{
+namespace Program{
     public class Program{
         public static void Main(string[] args){
             Application.EnableVisualStyles();
-            Application.Run(new CategoriaView());
+            Application.Run(new FornecedorCreate());
+            // Menu.index();
         }
     }
 }

@@ -39,6 +39,7 @@ namespace Views{
         public void btModeloUpdate_Click (object sender, EventArgs e){
             try{
                 ModeloModels modelo = GetSelectedModelo(Option.Update);
+                RefreshList();
                 var ModeloUpdate = new Views.ModeloUpdate(modelo);
                 if(ModeloUpdate.ShowDialog() == DialogResult.OK){
                    RefreshList();

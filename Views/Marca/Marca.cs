@@ -39,6 +39,7 @@ namespace Views{
         public void btMarcaUpdate_Click (object sender, EventArgs e){
             try{
                 MarcaModels marca = GetSelectedMarca(Option.Update);
+                RefreshList();
                 var MarcaUpdate = new Views.MarcaUpdate(marca);
                 if(MarcaUpdate.ShowDialog() == DialogResult.OK){
                    RefreshList();

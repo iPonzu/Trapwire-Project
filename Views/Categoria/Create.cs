@@ -16,7 +16,18 @@ namespace Views {
                 return;
             } else {
                 CategoriaController.Create(txtCategoriaNome.Text);
+                MessageBox.Show("Categoria cadastrada com sucesso.");
+                ClearForm();
             }
+            CategoriaView categoriaList = Application.OpenForms.OfType<CategoriaView>().FirstOrDefault();
+            if (categoriaList != null){
+                categoriaList.RefreshList();
+            }
+            this.Close();
+        }
+
+        private void ClearForm() {
+            txtCategoriaNome.Clear();
         }
 
         public CategoriaCreate(){

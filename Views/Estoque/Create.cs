@@ -10,12 +10,21 @@ namespace Views{
         public Button btCadEstoque;
 
         public void btCadEstoque_Click(object sender, EventArgs e){
-            if(txtEstoque == null || txtEndereco.Text == null){
+            if(txtEstoque.Text == null || txtEndereco.Text == null){
                 MessageBox.Show("Preencha todos os campos");
                 return;
             }else{
                 EstoqueController.Create(txtEstoque.Text, txtEndereco.Text);
+                MessageBox.Show("Estoque cadastrado com sucesso.");
+                ClearForm();
             }
+
+            EstoqueView estoqueList = Application.OpenForms.OfType<EstoqueView>().FirstOrDefault();
+        }
+
+        private void ClearForm(){
+            txtEstoque.Clear();
+            txtEndereco.Clear();
         }
 
         public EstoqueCreate(){
