@@ -7,7 +7,7 @@ namespace Models{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Column("Nome da marca: ")]
+        [Column("Nome: ")]
         public string Nome { get; set; }
 
         public MarcaModels(string nome) {

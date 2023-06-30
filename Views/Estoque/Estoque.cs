@@ -22,7 +22,7 @@ namespace Views{
             }
         }
         public EstoqueModels GetSelectedEstoque(Option option){
-            if(ListEstoque.SelectedItems.Count == 0){
+            if(ListEstoque.SelectedItems.Count > 0){
                 int selectedEstoqueId = int.Parse(ListEstoque.SelectedItems[0].Text);
                 return Controllers.EstoqueController.ReadById(selectedEstoqueId);
             }else{
@@ -36,7 +36,8 @@ namespace Views{
         public void btEstoqueUpdate_Click(object sender, EventArgs e){
             try{
                 EstoqueModels estoque = GetSelectedEstoque(Option.Update);
-                var EstoqueUpdate = new Views.EstoqueUpdate();
+                RefreshList();
+                var EstoqueUpdate = new Views.EstoqueUpdate(estoque);
                 if(EstoqueUpdate.ShowDialog() == DialogResult.OK){
                     RefreshList();
                     MessageBox.Show("Estoque atualizado.");
@@ -62,7 +63,14 @@ namespace Views{
         }
 
         public EstoqueView(){
-
+            this.Text = "Gerenciar Categorias";
+            this.Size = new System.Drawing.Size(800, 600);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
         }
     }
 }

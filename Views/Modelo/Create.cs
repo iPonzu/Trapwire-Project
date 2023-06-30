@@ -8,7 +8,7 @@ namespace Views{
         
         public Label lblidmodelo;
         public TextBox txtidmodelo;
-        public Label lblmodelo;
+        public Label lblNomemodelo;
         public TextBox txtNomemodelo;
         public Button btCadModelo;
         
@@ -23,47 +23,46 @@ namespace Views{
         }
 
 
-        public ModeloCreate()
-        {
-            this.Text = "Registrar Modelo";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
+        public ModeloCreate(){
+            Text = "Registrar Modelo";
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ShowIcon = false;
+            ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
 
-            this.lblidmodelo = new Label();
-            this.lblidmodelo.Text = "Id:";
-            this.lblidmodelo.Location = new Point(10, 50); // Horizontal, Vertical
-            this.lblidmodelo.Size = new Size(50, 20); // Largura, Altura
+            lblidmodelo = new Label();
+            lblidmodelo.Text = "ID:";
+            lblidmodelo.Location = new Point(10, 40); // Horizontal, Vertical
+            lblidmodelo.Size = new Size(20, 20); // Largura, Altura
 
-            this.txtidmodelo = new TextBox();  
-            this.txtidmodelo.Location = new Point(80, 40);
-            this.txtidmodelo.Size = new Size(150, 20);
+            txtidmodelo = new TextBox();  
+            txtidmodelo.Location = new Point(80, 40);
+            txtidmodelo.Size = new Size(150, 20);
 
-            this.lblmodelo = new Label();
-            this.lblmodelo.Text = "Modelo:";
-            this.lblidmodelo.Location = new Point(10, 70);
-            this.lblidmodelo.Size = new Size(50, 20);
+            lblNomemodelo = new Label();
+            lblNomemodelo.Text = "Modelo:";
+            lblNomemodelo.Location = new Point(10, 70);
+            lblNomemodelo.Size = new Size(50, 20);
 
-            this.txtNomemodelo = new TextBox();
-            this.txtNomemodelo.Location = new Point(80, 70);
-            this.txtNomemodelo.Size = new Size(150, 20);
+            txtNomemodelo = new TextBox();
+            txtNomemodelo.Location = new Point(80, 70);
+            txtNomemodelo.Size = new Size(150, 20);
 
-            this.btCadModelo = new Button();
-            this.btCadModelo.Text = "Cadastrar";
-            this.btCadModelo.Location = new Point(10, 130);
-            this.btCadModelo.Size = new Size(70, 20);
-            this.btCadModelo.Click += btCadModelo_Click;
+            btCadModelo = new Button();
+            btCadModelo.Text = "Cadastrar";
+            btCadModelo.Location = new Point(10, 130);
+            btCadModelo.Size = new Size(70, 20);
+            btCadModelo.Click += btCadModelo_Click;
 
 
-            this.Controls.Add(this.lblidmodelo);
-            this.Controls.Add(this.txtidmodelo);
-            this.Controls.Add(this.lblmodelo);
-            this.Controls.Add(this.txtNomemodelo);
-            this.Controls.Add(this.btCadModelo);
+            Controls.Add(lblidmodelo);
+            Controls.Add(txtidmodelo);
+            Controls.Add(lblNomemodelo);
+            Controls.Add(txtNomemodelo);
+            Controls.Add(btCadModelo);
         }
     }
 }

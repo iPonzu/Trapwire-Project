@@ -23,7 +23,7 @@ namespace Views{
         }
 
         public CategoriaModels GetSelectedCategoria(Option option){
-            if(ListCategoria.SelectedItems.Count == 0){
+            if(ListCategoria.SelectedItems.Count > 0){
                 int selectedCategoriaId = int.Parse(ListCategoria.SelectedItems[0].Text);
                 return Controllers.CategoriaController.ReadById(selectedCategoriaId);
             }else{
@@ -40,7 +40,8 @@ namespace Views{
         public void btCategoriaUpdate_Click (object sender, EventArgs e){
             try{
                 CategoriaModels categoria = GetSelectedCategoria(Option.Update);
-                var CategoriaUpdate = new Views.CategoriaUpdate();
+                RefreshList();
+                var CategoriaUpdate = new Views.CategoriaUpdate(categoria);
                 if(CategoriaUpdate.ShowDialog() == DialogResult.OK){
                    RefreshList();
                    MessageBox.Show("Categoria Atualizada com sucesso"); 

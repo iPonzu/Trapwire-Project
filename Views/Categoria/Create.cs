@@ -6,16 +6,16 @@ namespace Views {
 
     public class CategoriaCreate : Form {
 
-        public Label lblCategorianome;
-        public TextBox txtCategorianome;
+        public Label lblCategoriaNome;
+        public TextBox txtCategoriaNome;
         public Button btCadCategoria;
 
         public void btCadCategoria_Click(object sender, EventArgs e) {
-            if(txtCategorianome.Text == ""){
+            if(txtCategoriaNome.Text == ""){
                 MessageBox.Show("Preencha o nome");
                 return;
             } else {
-                CategoriaController.Create(txtCategorianome.Text);
+                CategoriaController.Create(txtCategoriaNome.Text);
             }
         }
 
@@ -29,22 +29,22 @@ namespace Views {
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
             
-            lblCategorianome = new Label();
-            lblCategorianome.Text = "Nome:";
-            lblCategorianome.Location = new Point(10, 50);
-            lblCategorianome.Size = new Size(50, 20);
+            lblCategoriaNome = new Label();
+            lblCategoriaNome.Text = "Nome:";
+            lblCategoriaNome.Location = new Point(10, 50);
+            lblCategoriaNome.Size = new Size(50, 20);
             
-            txtCategorianome = new TextBox();
-            txtCategorianome.Location = new Point(80, 50);
-            txtCategorianome.Size = new Size(100, 20);
+            txtCategoriaNome = new TextBox();
+            txtCategoriaNome.Location = new Point(80, 50);
+            txtCategoriaNome.Size = new Size(100, 20);
 
             btCadCategoria = new Button();
             btCadCategoria.Text = "Cadastrar";
             btCadCategoria.Location = new Point(10, 100);
             btCadCategoria.Size = new Size(70, 20);
 
-            Controls.Add(lblCategorianome);
-            Controls.Add(txtCategorianome);
+            Controls.Add(lblCategoriaNome);
+            Controls.Add(txtCategoriaNome);
         }
     }
 }

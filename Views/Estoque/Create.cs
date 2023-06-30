@@ -19,7 +19,15 @@ namespace Views{
         }
 
         public EstoqueCreate(){
-
+            Text = "Registrar Estoque";
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Size = new System.Drawing.Size(280, 330);
+        
         }
     }
 }

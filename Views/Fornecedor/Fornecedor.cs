@@ -29,7 +29,7 @@ namespace Views{
             }
         }
         public FornecedorModels GetSelectedFornecedor(Option option){
-            if(ListFornecedor.SelectedItems.Count == 0){
+            if(ListFornecedor.SelectedItems.Count > 0){
                 int selectedFornecedorId = int.Parse(ListFornecedor.SelectedItems[0].Text);
                 return Controllers.FornecedorController.ReadById(selectedFornecedorId);
             }else{
@@ -43,7 +43,8 @@ namespace Views{
         public void btFornecedorUpdate_Click (object sender, EventArgs e){
             try{
                 FornecedorModels fornecedor = GetSelectedFornecedor(Option.Update);
-                var FornecedorUpdate = new Views.FornecedorUpdate();
+                RefreshList();
+                var FornecedorUpdate = new Views.FornecedorUpdate(fornecedor);
                 if(FornecedorUpdate.ShowDialog() == DialogResult.OK){
                    RefreshList();
                    MessageBox.Show("Fornecedor atualizado com sucesso"); 

@@ -28,7 +28,14 @@ namespace Views{
         } 
 
         public FornecedorCreate(){
-            
+            Text = "Registrar Fornecedor";
+            StartPosition = FormStartPosition.CenterScreen;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            Size = new System.Drawing.Size(344,383);
         }   
 
     }

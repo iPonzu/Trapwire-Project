@@ -4,8 +4,8 @@ using Controllers;
 namespace Views{
     public class CategoriaUpdate : Form{
 
-        public Label lblid;
-        public TextBox txtid;
+        public Label lblId;
+        public TextBox txtId;
         public Label lblNome;
         public TextBox txtNome;
         public Button btUpdateCategoria;
@@ -13,19 +13,31 @@ namespace Views{
 
         private void btUpdateCategoria_Click(object sender, EventArgs e){
             CategoriaModels categoriaToUpdate = this.categoria;
+            categoriaToUpdate.Id = int.Parse(txtId.Text);
             categoriaToUpdate.Nome = Convert.ToString(this.txtNome.Text);
-            Controllers.CategoriaController.Update(categoriaToUpdate);
             
-            ListCategoria categoriaList = Application.OpenForms.OfType<ListCategoria>().FirstOrDefault();
-        
-            if(categoriaList != null){
-                categoriaList.RefreshList();
+            try{
+                if(categoriaToUpdate.Id == 0 || categoriaToUpdate.Nome == null){
+                    MessageBox.Show("Preencha os campos");
+                    return;
+                }else{
+                    CategoriaModels.Update(categoriaToUpdate);
+                    MessageBox.Show("Categoria modificada");
+                }
+                this.Close();
+            }catch(Exception ex){
+                throw ex;
             }
-            this.Close();
         }
-
-        public CategoriaUpdate() {
+    
+        public CategoriaUpdate(CategoriaModels categoria) {
             this.categoria = categoria;
+        
+
+        
+        
+        
+        
         }
     }
 }
