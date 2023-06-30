@@ -28,15 +28,44 @@ namespace Views{
         }
 
         public EstoqueCreate(){
-            Text = "Registrar Estoque";
-            StartPosition = FormStartPosition.CenterScreen;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            Size = new System.Drawing.Size(280, 330);
+            
+            this.Text = "Registrar estoque";
+            this.Size = new System.Drawing.Size(280, 360);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ShowIcon = false;
+            this.Size = new System.Drawing.Size(300,260);
+            
+            this.lblEstoque = new Label();
+            this.lblEstoque.Text = "Estoque:";
+            this.lblEstoque.Location = new Point(10, 40);
+            this.lblEstoque.Size = new Size(70, 20);
+
+            this.txtEstoque = new TextBox();
+            this.txtEstoque.Location = new Point(90, 40);
+            this.txtEstoque.Size = new Size(150, 20);
+
+            this.lblEndereco = new Label();
+            this.lblEndereco.Text = "Endereço:";
+            this.lblEndereco.Location = new Point(10, 70);
+            this.lblEndereco.Size = new Size(70, 20);
+
+            this.txtEndereco = new TextBox();
+            this.txtEndereco.Location = new Point(90, 70);
+            this.txtEndereco.Size = new Size(150, 20);
+
+            this.btCadEstoque = new Button();
+            this.btCadEstoque.Text = "Cadastrar";
+            this.btCadEstoque.Location = new Point(90, 150);
+            this.btCadEstoque.Size = new Size(150, 25);
         
+            this.Controls.Add(this.lblEstoque);
+            this.Controls.Add(this.txtEstoque);
+            this.Controls.Add(this.lblEndereco);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.btCadEstoque);
         }
     }
 }
