@@ -60,12 +60,14 @@ namespace Views{
             this.btCadEstoque.Text = "Cadastrar";
             this.btCadEstoque.Location = new Point(90, 150);
             this.btCadEstoque.Size = new Size(150, 25);
-        
+            this.btCadEstoque.Click += new EventHandler(btCadEstoque_Click);
+
             this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.txtEstoque);
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.btCadEstoque);
+
         }
     }
 }

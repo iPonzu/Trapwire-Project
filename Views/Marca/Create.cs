@@ -42,23 +42,24 @@ namespace Views{
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
 
-            lblMarcanome = new Label();
-            lblMarcanome.Text = "Nome:";
-            lblMarcanome.Location = new Point(10, 20);
-            lblMarcanome.Size = new Size(50, 30);
+            this.lblMarcanome = new Label();
+            this.lblMarcanome.Text = "Nome:";
+            this.lblMarcanome.Location = new Point(10, 20);
+            this.lblMarcanome.Size = new Size(50, 30);
             
-            txtMarcanome = new TextBox();
-            txtMarcanome.Location = new Point(80, 50);
-            txtMarcanome.Size = new Size(100, 20);
+            this.txtMarcanome = new TextBox();
+            this.txtMarcanome.Location = new Point(80, 50);
+            this.txtMarcanome.Size = new Size(100, 20);
 
-            btCadMarca = new Button();
-            btCadMarca.Text = "Cadastrar";
-            btCadMarca.Location = new Point(10, 100);
-            btCadMarca.Size = new Size(70, 20);
+            this.btCadMarca = new Button();
+            this.btCadMarca.Text = "Cadastrar";
+            this.btCadMarca.Location = new Point(10, 100);
+            this.btCadMarca.Size = new Size(70, 20);
+            this.btCadMarca.Click += new EventHandler(btCadMarca_Click);
 
-            Controls.Add(lblMarcanome);           
-            Controls.Add(txtMarcanome);
-            Controls.Add(btCadMarca);
+            Controls.Add(this.lblMarcanome);           
+            Controls.Add(this.txtMarcanome);
+            Controls.Add(this.btCadMarca);
             
         }
     }

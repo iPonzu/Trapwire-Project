@@ -54,9 +54,10 @@ namespace Views {
             this.btCadCategoria.Text = "Cadastrar";
             this.btCadCategoria.Location = new Point(10, 100);
             this.btCadCategoria.Size = new Size(70, 20);
+            this.btCadCategoria.Click += new EventHandler(this.btCadCategoria_Click);
 
-            Controls.Add(lblCategoriaNome);
-            Controls.Add(txtCategoriaNome);
+            this.Controls.Add(this.lblCategoriaNome);
+            this.Controls.Add(this.txtCategoriaNome);
         }
     }
 }

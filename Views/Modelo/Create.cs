@@ -16,9 +16,14 @@ namespace Views{
             } else {
                 ModeloController.Create(txtNomemodelo.Text);
                 MessageBox.Show("Modelo criado com sucesso");  
+                ClearForm();
             }
+            ModeloView modeloList = Application.OpenForms.OfType<ModeloView>().FirstOrDefault();
         }
 
+        private void ClearForm() {
+            txtNomemodelo.Clear();
+        }
 
         public ModeloCreate(){
             Text = "Registrar Modelo";
@@ -30,24 +35,24 @@ namespace Views{
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(251,200);
 
-            lblNomemodelo = new Label();
-            lblNomemodelo.Text = "Modelo:";
-            lblNomemodelo.Location = new Point(10, 40); // Horizontal, Vertical
-            lblNomemodelo.Size = new Size(50, 20); // Largura, Altura
+            this.lblNomemodelo = new Label();
+            this.lblNomemodelo.Text = "Modelo:";
+            this.lblNomemodelo.Location = new Point(10, 40); // Horizontal, Vertical
+            this.lblNomemodelo.Size = new Size(50, 20); // Largura, Altura
 
-            txtNomemodelo = new TextBox();
-            txtNomemodelo.Location = new Point(80, 40);
-            txtNomemodelo.Size = new Size(150, 20);
+            this.txtNomemodelo = new TextBox();
+            this.txtNomemodelo.Location = new Point(80, 40);
+            this.txtNomemodelo.Size = new Size(150, 20);
 
-            btCadModelo = new Button();
-            btCadModelo.Text = "Cadastrar";
-            btCadModelo.Location = new Point(10, 130);
-            btCadModelo.Size = new Size(70, 20);
-            btCadModelo.Click += btCadModelo_Click;
+            this.btCadModelo = new Button();
+            this.btCadModelo.Text = "Cadastrar";
+            this.btCadModelo.Location = new Point(10, 130);
+            this.btCadModelo.Size = new Size(70, 20);
+            this.btCadModelo.Click +=  new EventHandler(btCadModelo_Click);
 
-            Controls.Add(lblNomemodelo);
-            Controls.Add(txtNomemodelo);
-            Controls.Add(btCadModelo);
+            Controls.Add(this.lblNomemodelo);
+            Controls.Add(this.txtNomemodelo);
+            Controls.Add(this.btCadModelo);
         }
     }
 }

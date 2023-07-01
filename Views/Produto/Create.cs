@@ -37,59 +37,58 @@ namespace Views{
             ShowInTaskbar = false;
             Size = new System.Drawing.Size(280, 360);
 
-            lblidprod = new Label();
-            lblidprod.Text = "ID:";
-            lblidprod.Location = new Point(10, 20); // Horizontal, Vertical
-            lblidprod.Size = new Size(20, 20); // Largura, Altura
+            this.lblidprod = new Label();
+            this.lblidprod.Text = "ID:";
+            this.lblidprod.Location = new Point(10, 20); // Horizontal, Vertical
+            this.lblidprod.Size = new Size(20, 20); // Largura, Altura
         
-            txtidProd = new TextBox();  
-            txtidProd.Location = new Point(80, 20);
-            txtidProd.Size = new Size(50, 30);
+            this.txtidProd = new TextBox();  
+            this.txtidProd.Location = new Point(80, 20);
+            this.txtidProd.Size = new Size(50, 30);
 
-            lblModelo = new Label();
-            lblModelo.Text = "Marca:";
-            lblModelo.Location = new Point(10, 50);
-            lblModelo.Size = new Size(50, 20);
+            this.lblModelo = new Label();
+            this.lblModelo.Text = "Marca:";
+            this.lblModelo.Location = new Point(10, 50);
+            this.lblModelo.Size = new Size(50, 20);
 
-            txtModelo = new TextBox();
-            txtModelo.Location = new Point(80, 50);
-            txtModelo.Size = new Size(100, 20);
+            this.txtModelo = new TextBox();
+            this.txtModelo.Location = new Point(80, 50);
+            this.txtModelo.Size = new Size(100, 20);
 
-            lblproduto = new Label();
-            lblproduto.Text = "Modelo:";
-            lblproduto.Location = new Point(10, 80);
-            lblproduto.Size = new Size(50, 20);
+            this.lblproduto = new Label();
+            this.lblproduto.Text = "Modelo:";
+            this.lblproduto.Location = new Point(10, 80);
+            this.lblproduto.Size = new Size(50, 20);
 
-            txtProduto = new TextBox();
-            txtProduto.Location = new Point(80, 80);
-            txtProduto.Size = new Size(80, 20);
+            this.txtProduto = new TextBox();
+            this.txtProduto.Location = new Point(80, 80);
+            this.txtProduto.Size = new Size(80, 20);
 
-            lblcategoria = new Label();
-            lblcategoria.Text = "Categoria:";
-            lblcategoria.Location = new Point(10, 110);
-            lblcategoria.Size = new Size(70, 20);
+            this.lblcategoria = new Label();
+            this.lblcategoria.Text = "Categoria:";
+            this.lblcategoria.Location = new Point(10, 110);
+            this.lblcategoria.Size = new Size(70, 20);
 
-            txtCategoria = new TextBox();
-            txtCategoria.Location = new Point(80, 110);
-            txtCategoria.Size = new Size(150, 20);
+            this.txtCategoria = new TextBox();
+            this.txtCategoria.Location = new Point(80, 110);
+            this.txtCategoria.Size = new Size(150, 20);
 
-            btCadProduto = new Button();
-            btCadProduto.Text = "Cadastrar";
-            btCadProduto.Location = new Point(10, 150);
-            btCadProduto.Size = new Size(70, 20);
-            btCadProduto.Click += (sender, e) =>{
+            this.btCadProduto = new Button();
+            this.btCadProduto.Text = "Cadastrar";
+            this.btCadProduto.Location = new Point(10, 150);
+            this.btCadProduto.Size = new Size(70, 20);
+            this.btCadProduto.Click += new EventHandler (this.btCadProduto_Click);
 
-            };
 
-            Controls.Add(lblidprod);
-            Controls.Add(txtidProd);
-            Controls.Add(lblModelo);
-            Controls.Add(txtModelo);
-            Controls.Add(lblcategoria);
-            Controls.Add(txtCategoria);
-            Controls.Add(lblproduto);
-            Controls.Add(txtProduto);
-            Controls.Add(btCadProduto);
+            this.Controls.Add(lblidprod);
+            this.Controls.Add(txtidProd);
+            this.Controls.Add(lblModelo);
+            this.Controls.Add(txtModelo);
+            this.Controls.Add(lblcategoria);
+            this.Controls.Add(txtCategoria);
+            this.Controls.Add(lblproduto);
+            this.Controls.Add(txtProduto);
+            this.Controls.Add(btCadProduto);
         }
     }   
 }
