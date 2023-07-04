@@ -71,8 +71,8 @@ namespace Views{
         public ProdutoView(){
            this.Text = "Produtos";
             this.Size = new Size(800, 450);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = true;
             this.MinimizeBox = true;
             this.ShowIcon = false;

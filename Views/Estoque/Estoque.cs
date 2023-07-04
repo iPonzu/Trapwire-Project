@@ -74,6 +74,52 @@ namespace Views{
             this.MinimizeBox = true;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+
+            ListEstoque = new ListView();
+            ListEstoque.Size = new Size(680, 260);
+            ListEstoque.Location = new Point(50 ,50);
+            ListEstoque.View = System.Windows.Forms.View.Details;
+            ListEstoque.FullRowSelect = true;
+            ListEstoque.Columns.Add("ID", -2, HorizontalAlignment.Center);
+            ListEstoque.Columns.Add("Nome", -2, HorizontalAlignment.Center);
+            ListEstoque.Columns.Add("Modelo", -2, HorizontalAlignment.Center);
+            ListEstoque.Columns.Add("Categoria", -2, HorizontalAlignment.Center);
+            ListEstoque.Columns[0].Width = 50;
+            ListEstoque.Columns[1].Width = 100;
+            ListEstoque.Columns[2].Width = 100;
+            ListEstoque.Columns[3].Width = 100;
+
+            RefreshList();
+
+            Button btCad = new Button();
+            btCad.Text = "Cadastrar";
+            btCad.Size = new Size(100, 30);
+            btCad.Location = new Point(50, 330);
+            btCad.Click += new EventHandler(btCadEstoque_Click);
+
+            Button btUpdate = new Button();
+            btUpdate.Text = "Editar";
+            btUpdate.Size = new Size(100, 30);
+            btUpdate.Location = new Point(170, 330);
+            btUpdate.Click += new EventHandler(btEstoqueUpdate_Click);
+
+            Button btDelete = new Button();
+            btDelete.Text = "Excluir";
+            btDelete.Size = new Size(100, 30);
+            btDelete.Location = new Point(290, 330);
+            btDelete.Click += new EventHandler(btDelete_Click);
+
+            Button btClose = new Button();
+            btClose.Text = "Voltar";
+            btClose.Size = new Size(100, 30);
+            btClose.Location = new Point(450, 330);
+            btClose.Click += new EventHandler(btClose_Click);
+
+            Controls.Add(ListEstoque);
+            Controls.Add(btCad);
+            Controls.Add(btUpdate);
+            Controls.Add(btDelete);
+            Controls.Add(btClose);
         }
     }
 }

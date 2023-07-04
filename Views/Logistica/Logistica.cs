@@ -70,6 +70,57 @@ namespace Views{
         }
         public LogisticaView(){
 
+            this.Text = "Lista Logistica";
+            this.Size = new System.Drawing.Size(800, 600);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+
+            ListLogistica = new ListView();
+            ListLogistica.Size = new System.Drawing.Size(780, 500);
+            ListLogistica.Location = new System.Drawing.Point(50, 50);
+            ListLogistica.View = System.Windows.Forms.View.Details;
+            ListLogistica.FullRowSelect = true;
+            ListLogistica.Columns.Add("Data", -2, HorizontalAlignment.Center);
+            ListLogistica.Columns.Add("Quantidade", -2, HorizontalAlignment.Center);
+            ListLogistica.Columns.Add("Produto", -2, HorizontalAlignment.Center);
+            ListLogistica.Columns.Add("Estoque", -2, HorizontalAlignment.Center); 
+            ListLogistica.Columns[0].Width = 50;
+            ListLogistica.Columns[1].Width = 100;
+            ListLogistica.Columns[2].Width = 100;
+            ListLogistica.Columns[3].Width = 100;
+
+            RefreshList();
+
+            Button btCadLogistica = new Button();
+            btCadLogistica.Text = "Cadastrar";
+            btCadLogistica.Location = new System.Drawing.Point(50, 550);
+            btCadLogistica.Click += new EventHandler(btCadLogistica_Click);
+
+            Button btLogisticaUpdate = new Button();
+            btLogisticaUpdate.Text = "Atualizar";
+            btLogisticaUpdate.Location = new System.Drawing.Point(150, 550);
+            btLogisticaUpdate.Click += new EventHandler(btLogisticaUpdate_Click);
+
+            Button btDelete = new Button();
+            btDelete.Text = "Deletar";
+            btDelete.Location = new System.Drawing.Point(250, 550);
+            btDelete.Click += new EventHandler(btDelete_Click);
+
+            Button btClose = new Button();
+            btClose.Text = "Fechar";
+            btClose.Location = new System.Drawing.Point(350, 550);
+            btClose.Click += new EventHandler(btClose_Click);
+
+            Controls.Add(ListLogistica);
+            Controls.Add(btCadLogistica);
+            Controls.Add(btLogisticaUpdate);
+            Controls.Add(btDelete);
+            Controls.Add(btClose);
+
         }
     }
 }

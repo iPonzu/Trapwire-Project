@@ -38,6 +38,8 @@ namespace Views {
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Size = new System.Drawing.Size(344,200);
+
+            
             
             this.lblCategoriaNome = new Label();
             this.lblCategoriaNome.Text = "Nome:";

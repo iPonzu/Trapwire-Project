@@ -80,14 +80,14 @@ namespace Views{
 
 
             ListCategoria = new ListView();
-            ListCategoria.Location = new System.Drawing.Point(50, 50);
             ListCategoria.Size = new System.Drawing.Size(700, 400);
+            ListCategoria.Location = new System.Drawing.Point(50, 50);
             ListCategoria.View = System.Windows.Forms.View.Details;
-            ListCategoria.Columns.Add("Id");
-            ListCategoria.Columns.Add("Nome");
+            ListCategoria.FullRowSelect = true;
+            ListCategoria.Columns.Add("Id", -2, HorizontalAlignment.Center);
+            ListCategoria.Columns.Add("Nome", -2, HorizontalAlignment.Center);
             ListCategoria.Columns[0].Width = 50;
             ListCategoria.Columns[1].Width = 100;
-            ListCategoria.FullRowSelect = true;
 
             RefreshList();
 
