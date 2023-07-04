@@ -7,7 +7,7 @@ namespace Models{
         [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column("Nome: ")]
+        [Column("Nome")]
         public string Nome { get; set;}
         public int Marcaid {get; set;}
 

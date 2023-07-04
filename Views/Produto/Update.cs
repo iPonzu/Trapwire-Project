@@ -14,7 +14,7 @@ namespace Views{
 
         public ProdutoModels produto;
 
-        private void btUpdate_Click(object sender, EventArgs e){
+        private void btUpdateProduto_Click(object sender, EventArgs e){
             ProdutoModels produtoToUpdate = this.produto;
         }
         public ProdutoUpdate(ProdutoModels produto){
@@ -52,7 +52,7 @@ namespace Views{
             this.btUpdateProduto.Text = "Editar";
             this.btUpdateProduto.Location = new System.Drawing.Point(80, 260);
             this.btUpdateProduto.Size = new System.Drawing.Size(150, 35);
-            this.btUpdateProduto.Click += new EventHandler(btUpdate_Click);
+            this.btUpdateProduto.Click += new EventHandler(btUpdateProduto_Click);
         
             this.Controls.Add(this.txtModelo);   
             this.Controls.Add(this.txtCategoria);

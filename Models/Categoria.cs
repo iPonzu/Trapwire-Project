@@ -9,7 +9,7 @@ namespace Models{
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Column("Nome: ")]
+        [Column("Nome")]
         public string Nome { get; set; }
 
         public CategoriaModels(string nome){

@@ -4,7 +4,7 @@ namespace Program{
     public class Program{
         public static void Main(string[] args){
             Application.EnableVisualStyles();
-            Application.Run(new ModeloUpdate());
+            Application.Run(new ModeloCreate());
             // Menu.index();
         }
     }

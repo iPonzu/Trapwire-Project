@@ -7,15 +7,15 @@ namespace Models{
         [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column("Nome: ")]
+        [Column("Nome")]
         public string Nome { get; set; }
-        [Column("Nome Social: ")]
+        [Column("Nome Social")]
         public string NomeSocial { get; set; }
-        [Column("CNPJ: ")]
+        [Column("CNPJ")]
         public string Cnpj { get; set; }
-        [Column("Endereço: ")]
+        [Column("Endereço")]
         public string Endereco { get; set; }
-        [Column("Telefone: ")]
+        [Column("Telefone")]
         public string Telefone { get; set; }
     
         public FornecedorModels(string nome, string nomeSocial, string cnpj, string endereco, string telefone){

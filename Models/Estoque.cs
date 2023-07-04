@@ -8,9 +8,9 @@ namespace Models{
         [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column("Nome do estoque: ")]
+        [Column("Nome do estoque")]
         public string Nome { get; set; }
-        [Column("Endereço: ")]
+        [Column("Endereço")]
         public string Endereco { get; set; }
 
         public EstoqueModels(string nome, string endereco){
