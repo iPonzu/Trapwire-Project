@@ -1,5 +1,6 @@
 using Models;
 using Controllers;
+using System.Windows.Forms;
 
 namespace Views{
     public class EstoqueCreate : Form{
@@ -10,12 +11,12 @@ namespace Views{
         public Button btCadEstoque;
 
         public void btCadEstoque_Click(object sender, EventArgs e){
-            if(txtEstoque.Text == null || txtEndereco.Text == null){
-                MessageBox.Show("Preencha todos os campos");
+            if(txtEstoque.Text == "" || txtEndereco.Text == ""){
+                MessageBox.Show("Preencha todos os campos!");
                 return;
             }else{
                 EstoqueController.Create(txtEstoque.Text, txtEndereco.Text);
-                MessageBox.Show("Estoque cadastrado com sucesso.");
+                MessageBox.Show("Estoque cadastrado com sucesso!");
                 ClearForm();
             }
 
@@ -30,13 +31,12 @@ namespace Views{
         public EstoqueCreate(){
             
             this.Text = "Registrar estoque";
-            this.Size = new System.Drawing.Size(280, 360);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.ShowIcon = false;
-            this.Size = new System.Drawing.Size(300,260);
+            this.Size = new System.Drawing.Size(344,250);
             
             this.lblEstoque = new Label();
             this.lblEstoque.Text = "Estoque:";
@@ -58,7 +58,7 @@ namespace Views{
 
             this.btCadEstoque = new Button();
             this.btCadEstoque.Text = "Cadastrar";
-            this.btCadEstoque.Location = new Point(90, 150);
+            this.btCadEstoque.Location = new Point(90, 120);
             this.btCadEstoque.Size = new Size(150, 25);
             this.btCadEstoque.Click += new EventHandler(btCadEstoque_Click);
 

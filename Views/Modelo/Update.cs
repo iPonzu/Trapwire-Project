@@ -9,10 +9,9 @@ namespace Views{
         public Label lblNome;
         public TextBox txtNome;
         public Button btUpdateModelo;
-
         public ModeloModels modelo;
 
-        private void btUpdate_Click(object sender, EventArgs e){
+        private void btUpdateModelo_Click(object sender, EventArgs e){
             ModeloModels modeloToUpdate = this.modelo;
             modeloToUpdate.Nome = this.txtNome.Text;
             try{     
@@ -53,7 +52,7 @@ namespace Views{
             this.btUpdateModelo.Text = "Editar";
             this.btUpdateModelo.Location = new System.Drawing.Point(80, 260);
             this.btUpdateModelo.Size = new System.Drawing.Size(150, 35);
-            this.btUpdateModelo.Click += new EventHandler(btUpdate_Click);
+            this.btUpdateModelo.Click += new EventHandler(btUpdateModelo_Click);
 
         
             this.Controls.Add(this.lblNome);

@@ -26,8 +26,7 @@ namespace Views{
             }
         }
 
-        public ProdutoCreate()
-        {
+        public ProdutoCreate(){
             Text = "Registrar Produto";
             StartPosition = FormStartPosition.CenterScreen;
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -35,16 +34,16 @@ namespace Views{
             MinimizeBox = false;
             ShowIcon = false;
             ShowInTaskbar = false;
-            Size = new System.Drawing.Size(280, 360);
+            Size = new System.Drawing.Size(344, 280);
 
             this.lblidprod = new Label();
             this.lblidprod.Text = "ID:";
-            this.lblidprod.Location = new Point(10, 20); // Horizontal, Vertical
-            this.lblidprod.Size = new Size(20, 20); // Largura, Altura
+            this.lblidprod.Location = new Point(10, 20);
+            this.lblidprod.Size = new Size(20, 20);
         
             this.txtidProd = new TextBox();  
-            this.txtidProd.Location = new Point(80, 20);
-            this.txtidProd.Size = new Size(50, 30);
+            this.txtidProd.Location = new Point(90, 20);
+            this.txtidProd.Size = new Size(150, 30);
 
             this.lblModelo = new Label();
             this.lblModelo.Text = "Marca:";
@@ -52,8 +51,8 @@ namespace Views{
             this.lblModelo.Size = new Size(50, 20);
 
             this.txtModelo = new TextBox();
-            this.txtModelo.Location = new Point(80, 50);
-            this.txtModelo.Size = new Size(100, 20);
+            this.txtModelo.Location = new Point(90, 50);
+            this.txtModelo.Size = new Size(150, 20);
 
             this.lblproduto = new Label();
             this.lblproduto.Text = "Modelo:";
@@ -61,8 +60,8 @@ namespace Views{
             this.lblproduto.Size = new Size(50, 20);
 
             this.txtProduto = new TextBox();
-            this.txtProduto.Location = new Point(80, 80);
-            this.txtProduto.Size = new Size(80, 20);
+            this.txtProduto.Location = new Point(90, 80);
+            this.txtProduto.Size = new Size(150, 20);
 
             this.lblcategoria = new Label();
             this.lblcategoria.Text = "Categoria:";
@@ -70,14 +69,14 @@ namespace Views{
             this.lblcategoria.Size = new Size(70, 20);
 
             this.txtCategoria = new TextBox();
-            this.txtCategoria.Location = new Point(80, 110);
+            this.txtCategoria.Location = new Point(90, 110);
             this.txtCategoria.Size = new Size(150, 20);
 
             this.btCadProduto = new Button();
             this.btCadProduto.Text = "Cadastrar";
-            this.btCadProduto.Location = new Point(10, 150);
-            this.btCadProduto.Size = new Size(70, 20);
-            this.btCadProduto.Click += new EventHandler (this.btCadProduto_Click);
+            this.btCadProduto.Location = new Point(90, 160);
+            this.btCadProduto.Size = new Size(150, 25);
+            this.btCadProduto.Click += new EventHandler (btCadProduto_Click);
 
 
             this.Controls.Add(lblidprod);

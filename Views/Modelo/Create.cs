@@ -11,11 +11,11 @@ namespace Views{
         
           public void btCadModelo_Click(object sender, EventArgs e) {
             if (txtNomemodelo.Text == "") {
-                MessageBox.Show("Preencha os campos");
+                MessageBox.Show("Preencha os campos!");
                 return;
             } else {
                 ModeloController.Create(txtNomemodelo.Text);
-                MessageBox.Show("Modelo criado com sucesso");  
+                MessageBox.Show("Modelo criado com sucesso!");  
                 ClearForm();
             }
             ModeloView modeloList = Application.OpenForms.OfType<ModeloView>().FirstOrDefault();
@@ -26,33 +26,33 @@ namespace Views{
         }
 
         public ModeloCreate(){
-            Text = "Registrar Modelo";
-            StartPosition = FormStartPosition.CenterScreen;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MinimizeBox = false;
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            Size = new System.Drawing.Size(251,200);
+            this.Text = "Registrar Modelo";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Size = new System.Drawing.Size(344,200);
 
             this.lblNomemodelo = new Label();
             this.lblNomemodelo.Text = "Modelo:";
-            this.lblNomemodelo.Location = new Point(10, 40); // Horizontal, Vertical
-            this.lblNomemodelo.Size = new Size(50, 20); // Largura, Altura
+            this.lblNomemodelo.Location = new Point(10, 40);
+            this.lblNomemodelo.Size = new Size(50, 20);
 
             this.txtNomemodelo = new TextBox();
-            this.txtNomemodelo.Location = new Point(80, 40);
+            this.txtNomemodelo.Location = new Point(90, 40);
             this.txtNomemodelo.Size = new Size(150, 20);
 
             this.btCadModelo = new Button();
             this.btCadModelo.Text = "Cadastrar";
-            this.btCadModelo.Location = new Point(10, 130);
-            this.btCadModelo.Size = new Size(70, 20);
+            this.btCadModelo.Location = new Point(90, 90);
+            this.btCadModelo.Size = new Size(150, 25);
             this.btCadModelo.Click +=  new EventHandler(btCadModelo_Click);
 
-            Controls.Add(this.lblNomemodelo);
-            Controls.Add(this.txtNomemodelo);
-            Controls.Add(this.btCadModelo);
+            this.Controls.Add(lblNomemodelo);
+            this.Controls.Add(txtNomemodelo);
+            this.Controls.Add(btCadModelo);
         }
     }
 }

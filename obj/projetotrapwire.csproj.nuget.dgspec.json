@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj": {}
+    "C:\\Users\\andre.lima2\\Documents\\projeto jackson\\Trapwire-Project\\projetotrapwire.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj": {
+    "C:\\Users\\andre.lima2\\Documents\\projeto jackson\\Trapwire-Project\\projetotrapwire.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
+        "projectUniqueName": "C:\\Users\\andre.lima2\\Documents\\projeto jackson\\Trapwire-Project\\projetotrapwire.csproj",
         "projectName": "projetotrapwire",
-        "projectPath": "C:\\Users\\joao_\\projetotrapwire\\projetotrapwire.csproj",
-        "packagesPath": "C:\\Users\\joao_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joao_\\projetotrapwire\\obj\\",
+        "projectPath": "C:\\Users\\andre.lima2\\Documents\\projeto jackson\\Trapwire-Project\\projetotrapwire.csproj",
+        "packagesPath": "C:\\Users\\andre.lima2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre.lima2\\Documents\\projeto jackson\\Trapwire-Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\joao_\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\andre.lima2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
