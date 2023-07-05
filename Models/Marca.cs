@@ -3,11 +3,11 @@ using MyData;
 
 namespace Models{
     public class MarcaModels{
-        [Column("ID Marca: ")]
+        [Column("ID Marca")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Column("Nome: ")]
+        [Column("Nome")]
         public string Nome { get; set; }
 
         public MarcaModels(string nome) {

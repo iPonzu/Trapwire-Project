@@ -7,9 +7,9 @@ namespace Models{
         [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Column("Data: ")]
+        [Column("Data")]
         public string Data { get; set; }
-        [Column("Quantidade: ")]
+        [Column("Quantidade")]
         public int Quantidade { get; set; }
         public string Produtoid { get; set; }
         public string Estoqueid { get; set; }
