@@ -31,7 +31,6 @@ namespace Views{
                 throw new Exception($"Selecione uma Logistica para {(option == Option.Update ? "Update" : "Delete")}");
             }
         }
-
         
         public void btCadLogistica_Click (object sender, EventArgs e){
             var LogisticaCreate = new Views.LogisticaCreate();
@@ -120,7 +119,6 @@ namespace Views{
             Controls.Add(btLogisticaUpdate);
             Controls.Add(btDelete);
             Controls.Add(btClose);
-
         }
     }
 }

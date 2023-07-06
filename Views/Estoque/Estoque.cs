@@ -66,7 +66,7 @@ namespace Views{
         }
 
         public EstoqueView(){
-            this.Text = "Gerenciar Categorias";
+            this.Text = "Gerenciar Estoque";
             this.Size = new System.Drawing.Size(800, 600);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -82,12 +82,10 @@ namespace Views{
             ListEstoque.FullRowSelect = true;
             ListEstoque.Columns.Add("ID", -2, HorizontalAlignment.Center);
             ListEstoque.Columns.Add("Nome", -2, HorizontalAlignment.Center);
-            ListEstoque.Columns.Add("Modelo", -2, HorizontalAlignment.Center);
-            ListEstoque.Columns.Add("Categoria", -2, HorizontalAlignment.Center);
+            ListEstoque.Columns.Add("Endereço", -2, HorizontalAlignment.Center);
             ListEstoque.Columns[0].Width = 50;
             ListEstoque.Columns[1].Width = 100;
             ListEstoque.Columns[2].Width = 100;
-            ListEstoque.Columns[3].Width = 100;
 
             RefreshList();
 

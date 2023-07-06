@@ -18,11 +18,11 @@ namespace Views{
 
         public void btCadProduto_Click(object sender, EventArgs e) {
             if (txtProduto.Text == "" || txtModelo.Text == "" || txtCategoria.Text == "") {
-                MessageBox.Show("Preencha os campos");
+                MessageBox.Show("Preencha os campos!");
                 return;
             } else {
                 ProdutoController.Create(txtModelo.Text, txtCategoria.Text);
-                MessageBox.Show("Produto criado com sucesso");  
+                MessageBox.Show("Produto criado com sucesso!");  
             }
         }
 
