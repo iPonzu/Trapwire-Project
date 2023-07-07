@@ -18,6 +18,8 @@ namespace Views{
                 EstoqueController.Create(txtEstoque.Text, txtEndereco.Text);
                 MessageBox.Show("Estoque cadastrado com sucesso!");
                 ClearForm();
+                this.Close();
+                Menu.index();
             }
 
             EstoqueView estoqueList = Application.OpenForms.OfType<EstoqueView>().FirstOrDefault();

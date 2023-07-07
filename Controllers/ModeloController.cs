@@ -5,7 +5,7 @@ namespace Controllers{
     public class ModeloController{
         public static void Create(string modelo){
             if (modelo == null || modelo.Length == 0) {
-                throw new Exception("Nome inválido.");
+                throw new Exception("Modelo inválido.");
             }
             new CategoriaModels(modelo);
         }

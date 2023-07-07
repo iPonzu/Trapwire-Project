@@ -18,7 +18,11 @@ namespace Views{
                 MessageBox.Show("Modelo criado com sucesso!");  
                 ClearForm();
             }
-            ModeloView modeloList = Application.OpenForms.OfType<ModeloView>().FirstOrDefault();
+            ModeloView ListModelo = Application.OpenForms.OfType<ModeloView>().FirstOrDefault();
+            if (ListModelo != null) {
+                ListModelo.RefreshList();
+            }
+            this.Close();
         }
 
         private void ClearForm() {

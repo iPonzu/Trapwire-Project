@@ -27,20 +27,17 @@ namespace Controllers{
 
             MarcaModels.Update(marca);
         }
-        public static void Delete(string idRef){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
-            }catch (Exception e){
-                throw new Exception("ID inválido"); 
-            }
-            MarcaModels marca = MarcaModels.ReadById(id);
-            if (marca == null){
-                throw new Exception("Marca inválida");
+        public static void Delete(string idRef, string nome){  
+            using (var context = new Context()){
+                var marca = context.Marcas.FirstOrDefault(m => m.Nome == nome);
+                if(marca != null){
+                    context.Marcas.Remove(marca);
+                    context.SaveChanges();
+                }
             }
 
-            MarcaModels.Delete(marca);
         }
+
         public static List<MarcaModels> Read(){
             return MarcaModels.Read();
         }

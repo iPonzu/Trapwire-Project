@@ -12,6 +12,8 @@ namespace Views{
                 marca.Id.ToString(),
                 marca.Nome.ToString(),
             };
+            ListViewItem item = new ListViewItem(row);
+            ListMarca.Items.Add(item);
         }
         public void RefreshList(){
             ListMarca.Items.Clear();
@@ -21,12 +23,14 @@ namespace Views{
             }
         }
 
-        public MarcaModels GetSelectedMarca(Option option){
-            if(ListMarca.SelectedItems.Count == 0){
+       public MarcaModels GetSelectedMarca(Option option){
+            if(ListMarca.SelectedItems.Count > 0){
                 int selectedMarcaId = int.Parse(ListMarca.SelectedItems[0].Text);
                 return Controllers.MarcaController.ReadById(selectedMarcaId);
+            }if(option == Option.Update){
+                throw new Exception("Selecione uma Marca para atualizar");
             }else{
-                throw new Exception($"Selecione uma marca para {(option == Option.Update ? "Update" : "Delete")}");
+                throw new Exception("Selecione uma Marca para excluir");
             }
         }
 
@@ -52,22 +56,28 @@ namespace Views{
         
         private void btDelete_Click (object sender, EventArgs e){
             try{
-                MarcaModels Marca = GetSelectedMarca(Option.Delete);
-                DialogResult result = MessageBox.Show("Tem certeza que quer excluir esta Marca agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.MarcaController.Delete(Marca.Nome);
-                    RefreshList();
+                MarcaModels marcas = GetSelectedMarca(Option.Delete);
+                if(marcas != null){
+                    DialogResult result = MessageBox.Show("Tem certeza que quer excluir esta marca agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
+                    if(result == DialogResult.Yes){
+                        MarcaController.Delete(Convert.ToString(marcas.Id), marcas.Nome);
+                        RefreshList();
+                        MessageBox.Show("Marca excluída com sucesso");
+                    }
                 }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a Marca" + ex.Message);
+            }catch(Exception ex){
+                MessageBox.Show("Não foi possível excluir a marca desejada" + ex.Message);
             }
         }
 
         private void btClose_Click (object sender, EventArgs e){
             this.Close();
+            Menu.index();
         }
 
         public MarcaView(){
+            this.ListMarca = new System.Windows.Forms.ListView();
+
             this.Text = "Verificar Marca";
             this.Size = new System.Drawing.Size(800, 600);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

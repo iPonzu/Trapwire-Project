@@ -4,6 +4,7 @@ using MyData;
 namespace Models{
     public class MarcaModels{
         [Column("ID Marca")]
+        [System.ComponentModel.DataAnnotations.Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 

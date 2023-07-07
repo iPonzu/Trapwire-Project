@@ -12,6 +12,8 @@ namespace Views{
                 categoria.Id.ToString(),
                 categoria.Nome.ToString()
             };
+            ListViewItem item = new ListViewItem(row);
+            ListCategoria.Items.Add(item);
         }
 
         public void RefreshList(){

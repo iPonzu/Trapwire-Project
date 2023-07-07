@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace Views{
     public class MarcaCreate : Form{
+
         public Label lblMarcanome;
         public TextBox txtMarcanome;
         public Button btCadMarca;
@@ -17,9 +18,9 @@ namespace Views{
                 MessageBox.Show("Marca cadastrada com sucesso!");
                 ClearForm();
             }
-            MarcaView marcaList = Application.OpenForms.OfType<MarcaView>().FirstOrDefault();
-            if(marcaList != null){
-                marcaList.RefreshList();
+            MarcaView ListMarca = Application.OpenForms.OfType<MarcaView>().FirstOrDefault();
+            if(ListMarca != null){
+                ListMarca.RefreshList();
             }
             this.Close();
         }

@@ -52,8 +52,5 @@ namespace Models{
                 return modelo;
             }   
         }  
-        internal void RefreshList(){
-            throw new NotImplementedException();
-        }
     } 
 }       

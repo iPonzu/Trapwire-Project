@@ -3,16 +3,17 @@ using Controllers;
 
 namespace Views{
     public class ModeloView : Form{
-        public enum Option {Update, Delete}
+        public enum Option{Update, Delete};
 
         ListView ListModelo;
 
         private void AddListView(Models.ModeloModels modelo){
-            string[] row = {
+            string[]row = {
                 modelo.Id.ToString(),
-                modelo.Nome.ToString()
-           };   
+                modelo.Nome.ToString(),
+            };
         }
+
         public void RefreshList(){
             ListModelo.Items.Clear();
             List<ModeloModels> modelos = ModeloModels.Read();
@@ -22,49 +23,52 @@ namespace Views{
         }
 
         public ModeloModels GetSelectedModelo(Option option){
-            if(ListModelo.SelectedItems.Count == 0){
+            if(ListModelo.SelectedItems.Count > 0){
                 int selectedModeloId = int.Parse(ListModelo.SelectedItems[0].Text);
                 return Controllers.ModeloController.ReadById(selectedModeloId);
+            }if(option == Option.Update){
+                throw new Exception("Selecione um modelo para atualizar");
             }else{
-                throw new Exception($"Selecione um modelo para {(option == Option.Update ? "Update" : "Delete")}");
+                throw new Exception("Selecione um modelo para excluir");    
             }
         }
 
-        
-        public void btCadModelo_Click (object sender, EventArgs e){
+        private void btCadModelo_Click (object sender, EventArgs e){
             var ModeloCreate = new Views.ModeloCreate();
             ModeloCreate.Show();
         }
-        
-        public void btModeloUpdate_Click (object sender, EventArgs e){
+
+        private void btModeloUpdate_Click (object sender, EventArgs e){
             try{
                 ModeloModels modelo = GetSelectedModelo(Option.Update);
                 RefreshList();
                 var ModeloUpdate = new Views.ModeloUpdate(modelo);
                 if(ModeloUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Modelo atualizado com sucesso"); 
-                }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir o modelo desejado" + ex.Message);
-            }
-        }
-        
-        private void btDelete_Click (object sender, EventArgs e){
-            try{
-                ModeloModels Modelo = GetSelectedModelo(Option.Delete);
-                DialogResult result = MessageBox.Show("Tem certeza que quer excluir esta Modelo agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.ModeloController.Delete(Modelo.Nome);
                     RefreshList();
+                    MessageBox.Show("Modelo Atualizado com sucesso");
                 }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a Modelo" + ex.Message);
+            } catch (Exception err) {
+                MessageBox.Show("Não foi possível excluir o modelo desejado" + err.Message);
             }
         }
 
-        private void btClose_Click (object sender, EventArgs e){
+        private void btDelete_Click(object sender, EventArgs e){
+            try{
+                ModeloModels modelo = GetSelectedModelo(Option.Delete);
+                if(modelo != null){
+                    ModeloController.Delete(Convert.ToString(modelo.Id));
+                    RefreshList();
+                    MessageBox.Show("Modelo excluído com sucesso");
+                }
+
+            }catch (Exception err){
+                MessageBox.Show("Não foi possível excluir o modelo desejado" + err.Message);
+            }
+        }
+
+        private void btClose_Click(object sender, EventArgs e){
             this.Close();
+            Menu.index();
         }
 
         public ModeloView(){
@@ -113,11 +117,12 @@ namespace Views{
             btClose.Location = new Point(450, 330);
             btClose.Click += new EventHandler(btClose_Click);
 
-            Controls.Add(ListModelo);
-            Controls.Add(btCad);
-            Controls.Add(btUpdate);
-            Controls.Add(btDelete);
-            Controls.Add(btClose);
+            this.Controls.Add(ListModelo);
+            this.Controls.Add(btCad);
+            this.Controls.Add(btUpdate);
+            this.Controls.Add(btDelete);
+            this.Controls.Add(btClose);
         }
+
     }
 }

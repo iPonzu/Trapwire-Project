@@ -144,3 +144,6 @@ C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\bin\Debug\net7.0
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.csproj.CopyComplete
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\projetotrapwire.genruntimeconfig.cache
 C:\Users\andre.lima2\Documents\projeto jackson\Trapwire-Project\obj\Debug\net7.0-windows\ref\projetotrapwire.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Users\joao_\projetotrapwire\bin\Debug\net7.0-windows\Pomelo.EntityFrameworkCore.MySql.Design.dll

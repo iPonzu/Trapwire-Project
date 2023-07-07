@@ -14,6 +14,8 @@ namespace Views{
                 logistica.Produtoid.ToString(),
                 logistica.Estoqueid.ToString()
             };
+            ListViewItem item = new ListViewItem(row);
+            ListLogistica.Items.Add(item);
         }
         public void RefreshList(){
             ListLogistica.Items.Clear();

@@ -23,7 +23,7 @@ namespace Views{
 
         private void btUpdateFornecedor_Click(object sender, EventArgs e){
             FornecedorModels fornecedorToUpdate = this.fornecedor;
-            fornecedorToUpdate.Id = int.Parse(this.txtId.Text);
+            fornecedorToUpdate.Id = (this.txtId.Text.ToString() == "" ? 0 : int.Parse(this.txtId.Text));
             fornecedorToUpdate.Nome = this.txtNome.Text;
             fornecedorToUpdate.Cnpj = this.txtcnpj.Text;
             fornecedorToUpdate.Telefone = this.txtTelefone.Text;
@@ -49,6 +49,8 @@ namespace Views{
 
         public FornecedorUpdate(FornecedorModels fornecedor){
             this.fornecedor = fornecedor;
+            
+        
         }
 
     }
