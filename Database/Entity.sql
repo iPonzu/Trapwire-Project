@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `TrapwireSQL`.`Modelo` (
   `nome` VARCHAR(255) NOT NULL,
   `Marca_idMarca` INT NOT NULL,
   PRIMARY KEY (`idModelo`),
-  INDEX `fk_Modelo_Marca1_id` (`Marca_idMarca` ) VISIBLE,
+  INDEX `fk_Modelo_Marca1_id` (`Marca_idMarca` ) ,
   CONSTRAINT `fk_Modelo_Marca1`
     FOREIGN KEY (`Marca_idMarca`)
     REFERENCES `TrapwireSQL`.`Marca` (`idMarca`)
@@ -80,10 +80,9 @@ CREATE TABLE IF NOT EXISTS `TrapwireSQL`.`Produto` (
   `Marca_idMarca` INT NOT NULL,
   `Categoria_idCategoria` INT NOT NULL,
   PRIMARY KEY (`idProduto`, `Fornecedor_idFornecedor`),
-  INDEX `fk_Produto_Fornecedor1_id` (`Fornecedor_idFornecedor` ) VISIBLE,
-  INDEX `fk_Produto_Fornecedor1_id` (`Fornecedor_idFornecedor` ) VISIBLE,
-  INDEX `fk_Produto_Marca1_id` (`Marca_idMarca` ) VISIBLE,
-  INDEX `fk_Produto_Categoria1_id` (`Categoria_idCategoria` ) VISIBLE,
+  INDEX `fk_Produto_Fornecedor_id` (`Fornecedor_idFornecedor` ) ,
+  INDEX `fk_Produto_Marca1_id` (`Marca_idMarca` ) ,
+  INDEX `fk_Produto_Categoria1_id` (`Categoria_idCategoria` ) ,
   CONSTRAINT `fk_Produto_Fornecedor1`
     FOREIGN KEY (`Fornecedor_idFornecedor`)
     REFERENCES `TrapwireSQL`.`Fornecedor` (`idFornecedor`)
@@ -124,8 +123,8 @@ CREATE TABLE IF NOT EXISTS `TrapwireSQL`.`Logistica` (
   `Produto_idProduto` INT NOT NULL,
   `Estoque_idEstoque` INT NOT NULL,
   PRIMARY KEY (`idLogistica`, `Produto_idProduto`, `Estoque_idEstoque`),
-  INDEX `fk_Logistica_Produto_id` (`Produto_idProduto` ) VISIBLE,
-  INDEX `fk_Logistica_Estoque1_id` (`Estoque_idEstoque` ) VISIBLE,
+  INDEX `fk_Logistica_Produto_id` (`Produto_idProduto` ) ,
+  INDEX `fk_Logistica_Estoque1_id` (`Estoque_idEstoque` ) ,
   CONSTRAINT `fk_Logistica_Produto`
     FOREIGN KEY (`Produto_idProduto`)
     REFERENCES `TrapwireSQL`.`Produto` (`idProduto`)
