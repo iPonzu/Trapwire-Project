@@ -11,7 +11,10 @@ namespace Views{
             string[]row = {
                 modelo.Id.ToString(),
                 modelo.Nome.ToString(),
+                modelo.Marcaid.ToString(),
             };
+            ListViewItem item = new ListViewItem(row);
+            ListModelo.Items.Add(item);
         }
 
         public void RefreshList(){
@@ -41,22 +44,22 @@ namespace Views{
         private void btModeloUpdate_Click (object sender, EventArgs e){
             try{
                 ModeloModels modelo = GetSelectedModelo(Option.Update);
-                RefreshList();
                 var ModeloUpdate = new Views.ModeloUpdate(modelo);
                 if(ModeloUpdate.ShowDialog() == DialogResult.OK){
                     RefreshList();
                     MessageBox.Show("Modelo Atualizado com sucesso");
                 }
             } catch (Exception err) {
-                MessageBox.Show("Não foi possível excluir o modelo desejado" + err.Message);
+                MessageBox.Show("Não foi possível editar o modelo desejado" + err.Message);
             }
+            RefreshList();
         }
 
         private void btDelete_Click(object sender, EventArgs e){
             try{
                 ModeloModels modelo = GetSelectedModelo(Option.Delete);
                 if(modelo != null){
-                    ModeloController.Delete(Convert.ToString(modelo.Id));
+                    ModeloController.Delete(Convert.ToString(modelo.Id), modelo.Nome);
                     RefreshList();
                     MessageBox.Show("Modelo excluído com sucesso");
                 }
@@ -70,9 +73,10 @@ namespace Views{
             this.Close();
             Menu.index();
         }
+   
 
         public ModeloView(){
-            this.Text = "Verificar Modelo";
+            this.Text = "Gerenciar Modelos";
             this.Size = new System.Drawing.Size(800, 600);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

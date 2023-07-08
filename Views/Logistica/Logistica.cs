@@ -7,20 +7,20 @@ namespace Views{
 
         ListView ListLogistica;
 
-        private void AddListView (Models.LogisticaModels logistica){
-            string [] row = {
+        private void AddListView(Models.LogisticaModels logistica){
+            string[] row = {
                 logistica.Data.ToString(),
                 logistica.Quantidade.ToString(),
-                logistica.Produtoid.ToString(),
-                logistica.Estoqueid.ToString()
+                logistica.Produtoid,
+                logistica.Estoqueid
             };
             ListViewItem item = new ListViewItem(row);
             ListLogistica.Items.Add(item);
         }
         public void RefreshList(){
             ListLogistica.Items.Clear();
-            List<LogisticaModels> logisticas = LogisticaModels.Read();
-            foreach (LogisticaModels logistica in logisticas){
+            List<Models.LogisticaModels> logisticas = LogisticaModels.Read();
+            foreach(Models.LogisticaModels logistica in logisticas){
                 AddListView(logistica);
             }
         }
@@ -29,50 +29,51 @@ namespace Views{
             if(ListLogistica.SelectedItems.Count > 0){
                 int selectedLogisticaId = int.Parse(ListLogistica.SelectedItems[0].Text);
                 return Controllers.LogisticaController.ReadById(selectedLogisticaId);
+            }if(option == Option.Update){
+                throw new Exception("Selecione uma logistica para atualizar");
             }else{
-                throw new Exception($"Selecione uma Logistica para {(option == Option.Update ? "Update" : "Delete")}");
+                throw new Exception("Selecione uma logistica para deletar");
             }
         }
-        
-        public void btCadLogistica_Click (object sender, EventArgs e){
+
+        private void btCadLogistica_Click (object sender, EventArgs e){
             var LogisticaCreate = new Views.LogisticaCreate();
             LogisticaCreate.Show();
         }
-        
-        public void btLogisticaUpdate_Click (object sender, EventArgs e){
+
+        private void btLogisticaUpdate_Click (object sender, EventArgs e){
             try{
                 LogisticaModels logistica = GetSelectedLogistica(Option.Update);
                 RefreshList();
                 var LogisticaUpdate = new Views.LogisticaUpdate(logistica);
                 if(LogisticaUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Logistica Atualizada com sucesso"); 
+                    RefreshList();
+                    MessageBox.Show("Logistica atualizada com sucesso");
                 }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a Logistica desejada" + ex.Message);
+            } catch (Exception err) {
+                MessageBox.Show("Não foi possível atualizar a logistica desejada" + err.Message);
             }
         }
-        
+
         private void btDelete_Click (object sender, EventArgs e){
             try{
-                LogisticaModels Logistica = GetSelectedLogistica(Option.Delete);
-                DialogResult result = MessageBox.Show("Tem certeza que quer excluir esta Logistica agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.LogisticaController.Delete(Convert.ToString(Logistica.Id));
-                    RefreshList();
-                }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a Logistica" + ex.Message);
+                LogisticaModels logistica = GetSelectedLogistica(Option.Delete);
+                LogisticaController.Delete(Convert.ToString(logistica.Id));
+                RefreshList();
+                MessageBox.Show("Logistica deletada com sucesso");
+            } catch (Exception err) {
+                MessageBox.Show("Não foi possível deletar a logistica desejada" + err.Message);
             }
         }
 
         private void btClose_Click (object sender, EventArgs e){
             this.Close();
+            Menu.index();
         }
-        public LogisticaView(){
 
-            this.Text = "Lista Logistica";
-            this.Size = new System.Drawing.Size(800, 600);
+        public LogisticaView(){
+            this.Text = "Gerenciar Logistica";
+            this.Size = new System.Drawing.Size(800, 800);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = true;

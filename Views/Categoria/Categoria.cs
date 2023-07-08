@@ -39,18 +39,17 @@ namespace Views{
             CategoriaCreate.Show();
         }
         
-        public void btCategoriaUpdate_Click (object sender, EventArgs e){
-            try{
-                CategoriaModels categoria = GetSelectedCategoria(Option.Update);
-                RefreshList();
+        private void btCategoriaUpdate_Click(object sender, EventArgs e){
+            CategoriaModels categoria = GetSelectedCategoria(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza que quer atualizar esta categoria agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(categoria != null){
                 var CategoriaUpdate = new Views.CategoriaUpdate(categoria);
                 if(CategoriaUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Categoria Atualizada com sucesso"); 
+                    RefreshList();
+                    MessageBox.Show("Categoria atualizada.");
                 }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a categoria desejada" + ex.Message);
             }
+            RefreshList();
         }
         
         private void btDelete_Click (object sender, EventArgs e){

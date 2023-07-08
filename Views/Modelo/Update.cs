@@ -31,7 +31,7 @@ namespace Views{
             this.modelo = modelo;
 
             this.Text = "Editar Modelo";
-            this.Size = new System.Drawing.Size(234, 191);
+            this.Size = new System.Drawing.Size(300, 191);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -53,7 +53,6 @@ namespace Views{
             this.btUpdateModelo.Location = new System.Drawing.Point(80, 260);
             this.btUpdateModelo.Size = new System.Drawing.Size(150, 35);
             this.btUpdateModelo.Click += new EventHandler(btUpdateModelo_Click);
-
         
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome);

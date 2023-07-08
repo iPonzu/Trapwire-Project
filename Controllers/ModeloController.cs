@@ -3,11 +3,11 @@ using MyData;
 
 namespace Controllers{
     public class ModeloController{
-        public static void Create(string modelo){
-            if (modelo == null || modelo.Length == 0) {
+        public static void Create(string nome){
+            if (nome == null || nome.Length == 0) {
                 throw new Exception("Modelo inválido.");
             }
-            new CategoriaModels(modelo);
+            new ModeloModels(nome);
         }
 
         public static void Update(string idRef, string nome){
@@ -27,20 +27,14 @@ namespace Controllers{
             ModeloModels.Update(modelo);
         }  
 
-        public static void Delete(string idRef){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
+        public static void Delete(string idRef, string nome){
+            using (var context = new Context()){
+                var modelo = context.Modelos.FirstOrDefault(m => m.Nome == nome);
+                if(modelo != null){
+                    context.Modelos.Remove(modelo);
+                    context.SaveChanges();
+                }
             }
-            catch (Exception e){ 
-                throw new Exception ("ID Inválido");
-            }
-            ModeloModels modelo = ModeloModels.ReadById(id);
-            if(modelo != null){
-                throw new Exception("Modelo inválido.");
-            }
-
-            ModeloModels.Delete(modelo);
         } 
 
         public static List<ModeloModels> Read(){

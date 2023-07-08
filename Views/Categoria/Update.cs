@@ -4,8 +4,6 @@ using Controllers;
 namespace Views{
     public class CategoriaUpdate : Form{
 
-        public Label lblId;
-        public TextBox txtId;
         public Label lblNome;
         public TextBox txtNome;
         public Button btUpdateCategoria;
@@ -13,7 +11,7 @@ namespace Views{
 
         private void btUpdateCategoria_Click(object sender, EventArgs e){
             CategoriaModels categoriaToUpdate = this.categoria;
-            categoriaToUpdate.Id = int.Parse(txtId.Text);
+            // categoriaToUpdate.Id = int.Parse(txtId.Text);
             categoriaToUpdate.Nome = Convert.ToString(this.txtNome.Text);
             
             try{
@@ -42,16 +40,16 @@ namespace Views{
             this.ShowIcon = false;   
             this.ShowInTaskbar = false;
 
-            lblId = new Label();
-            lblId.Text = "Id: ";
-            lblId.Size = new Size(50, 20);
-            lblId.Location = new Point(10, 40);
-            this.Controls.Add(lblId);
+            // lblId = new Label();
+            // lblId.Text = "Id: ";
+            // lblId.Size = new Size(50, 20);
+            // lblId.Location = new Point(10, 40);
+            // this.Controls.Add(lblId);
 
-            txtId = new TextBox();
-            txtId.Location = new Point(80, 40);
-            txtId.Size = new Size(150, 20);
-            this.Controls.Add(txtId);
+            // txtId = new TextBox();
+            // txtId.Location = new Point(80, 40);
+            // txtId.Size = new Size(150, 20);
+            // this.Controls.Add(txtId);
 
             lblNome = new Label();
             lblNome.Text = "Nome: ";

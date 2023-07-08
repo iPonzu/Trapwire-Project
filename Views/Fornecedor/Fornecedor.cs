@@ -31,45 +31,61 @@ namespace Views{
             if(ListFornecedor.SelectedItems.Count > 0){
                 int selectedFornecedorId = int.Parse(ListFornecedor.SelectedItems[0].Text);
                 return Controllers.FornecedorController.ReadById(selectedFornecedorId);
-            }else{
+            }if(option == Option.Update){
                 throw new Exception($"Selecione um fornecedor para {(option == Option.Update ? "Update" : "Delete")}");
+            }
+            else{
+                throw new Exception($"Selecione um fornecedor para {(option == Option.Delete ? "Update" : "Delete")}");
             }
         }
         public void btCadFornecedor_Click(object sender, EventArgs e){
             var FornecedorCreate = new Views.FornecedorCreate();
             FornecedorCreate.Show();
         }
-        public void btFornecedorUpdate_Click (object sender, EventArgs e){
-            try{
-                FornecedorModels fornecedor = GetSelectedFornecedor(Option.Update);
-                RefreshList();
+        private void btFornecedorUpdate_Click(object sender, EventArgs e){
+            FornecedorModels fornecedor = GetSelectedFornecedor(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza que quer atualizar este fornecedor?", "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(fornecedor != null){
                 var FornecedorUpdate = new Views.FornecedorUpdate(fornecedor);
                 if(FornecedorUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Fornecedor atualizado com sucesso"); 
+                    RefreshList();
+                    MessageBox.Show("Fornecedor atualizado com sucesso");
                 }
-            } catch (Exception err) {
-                MessageBox.Show("Não foi possível excluir o fornecedor desejado" + err.Message);
             }
+            RefreshList();
         }
-        private void btDelete_Click(object sender, EventArgs e){
+        // private void btDelete_Click(object sender, EventArgs e){
+        //     try{
+        //         FornecedorModels fornecedor = GetSelectedFornecedor(Option.Delete);
+        //         DialogResult result = MessageBox.Show("Tem certeza que quer excluir este fornecedor?", "Confirmar exclusão", MessageBoxButtons.YesNo);
+        //         if(result == DialogResult.Yes){
+        //             Controllers.FornecedorController.Delete(Convert.ToString(fornecedor.Id), fornecedor.Nome);
+        //         }
+        //     }catch(Exception err){
+        //         MessageBox.Show("Não foi possível excluir o fornecedor" + err.Message);
+        //     }
+        // }
+        private void btDelete_Click(object sender,EventArgs e){
             try{
                 FornecedorModels fornecedor = GetSelectedFornecedor(Option.Delete);
                 DialogResult result = MessageBox.Show("Tem certeza que quer excluir este fornecedor?", "Confirmar exclusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.FornecedorController.Delete(fornecedor.Nome);
+                if(fornecedor != null){
+                    FornecedorController.Delete(Convert.ToString(fornecedor.Id), fornecedor.Nome);
+                    RefreshList();
+                    MessageBox.Show("Fornecedor excluído com sucesso");
                 }
             }catch(Exception err){
-                MessageBox.Show("Não foi possível excluir o fornecedor" + err.Message);
+
             }
         }
         private void btClose_Click(object sender, EventArgs e){
             this.Close();
+            Menu.index();
         }
         public FornecedorView(){
             
-            this.Text = "Lista de Fornecedores";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Text = "Gerenciar Fornecedores";
+            this.Size = new System.Drawing.Size(800, 650);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = true;
@@ -78,7 +94,7 @@ namespace Views{
             this.ShowInTaskbar = false;
 
             ListFornecedor = new ListView();
-            ListFornecedor.Size = new System.Drawing.Size(780, 500);
+            ListFornecedor.Size = new System.Drawing.Size(680, 440);
             ListFornecedor.Location = new System.Drawing.Point(50, 50);
             ListFornecedor.View = System.Windows.Forms.View.Details;
             ListFornecedor.FullRowSelect = true;

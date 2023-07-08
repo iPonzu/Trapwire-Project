@@ -28,41 +28,63 @@ namespace Views{
             if(ListEstoque.SelectedItems.Count > 0){
                 int selectedEstoqueId = int.Parse(ListEstoque.SelectedItems[0].Text);
                 return Controllers.EstoqueController.ReadById(selectedEstoqueId);
-            }else{
+            }if(option == Option.Update){
                 throw new Exception($"Selecione um estoque para {(option == Option.Update ? "Update" : "Delete")}");
             }
+            else{
+                throw new Exception($"Selecione um estoque para {(option == Option.Delete ? "Update" : "Delete")}");
+            }
         }
-        public void btCadEstoque_Click(object sender, EventArgs e){
+        private void btCadEstoque_Click(object sender, EventArgs e){
             var EstoqueCreate = new Views.EstoqueCreate();
             EstoqueCreate.Show();
         }
-        public void btEstoqueUpdate_Click(object sender, EventArgs e){
-            try{
-                EstoqueModels estoque = GetSelectedEstoque(Option.Update);
-                RefreshList();
+        // private void btEstoqueUpdate_Click(object sender, EventArgs e){
+        //     try{
+        //         EstoqueModels estoque = GetSelectedEstoque(Option.Update);
+        //         RefreshList();
+        //         var EstoqueUpdate = new Views.EstoqueUpdate(estoque);
+        //         if(EstoqueUpdate.ShowDialog() == DialogResult.OK){
+        //             RefreshList();
+        //             MessageBox.Show("Estoque atualizado.");
+        //         }
+        //     }
+        //     catch (Exception ex){
+        //         MessageBox.Show("Não foi possível atualizar ou excluir o estoque" + ex.Message);
+        //     }
+        // }
+
+        private void btEstoqueUpdate_Click(object sender, EventArgs e){
+            EstoqueModels estoque = GetSelectedEstoque(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza de que quer atualizar este estoque agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(estoque != null){
                 var EstoqueUpdate = new Views.EstoqueUpdate(estoque);
                 if(EstoqueUpdate.ShowDialog() == DialogResult.OK){
                     RefreshList();
-                    MessageBox.Show("Estoque atualizado.");
+                    MessageBox.Show("Estoque atualizado com sucesso");
                 }
             }
-            catch (Exception ex){
-                MessageBox.Show("Não foi possível atualizar ou excluir o estoque" + ex.Message);
-            }
+            RefreshList();
         }
+
+
         private void btDelete_Click(object sender, EventArgs e){
             try{
                 EstoqueModels estoque = GetSelectedEstoque(Option.Delete);
                 DialogResult result = MessageBox.Show("Tem certeza de que quer excluir este estoque agora?" , "Confirmar exclusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.EstoqueController.Delete(estoque.Nome);
+                if(estoque != null){
+                    EstoqueController.Delete(Convert.ToString(estoque.Id),estoque.Nome);
+                    RefreshList();
+                    MessageBox.Show("Estoque excluído com sucesso");
                 }
             }catch (Exception ex){
                 MessageBox.Show("Não foi possível excluir este estoque" + ex.Message);
             }
         }
+        
         private void btClose_Click(object sender, EventArgs e){
             this.Close();
+            Menu.index();
         }
 
         public EstoqueView(){

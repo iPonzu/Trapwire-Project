@@ -31,19 +31,14 @@ namespace Controllers{
 
             FornecedorModels.Update(fornecedor);
         }
-        public static void Delete(string idRef){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
-            }catch (Exception e){
-                throw new Exception("ID inválido");
+        public static void Delete(string idRef, string nome){
+            using(var context = new Context()){
+                var fornecedor = context.Fornecedores.FirstOrDefault(f => f.Nome == nome);
+                if(fornecedor != null){
+                    context.Fornecedores.Remove(fornecedor);
+                    context.SaveChanges();
+                }
             }
-            FornecedorModels fornecedor = FornecedorModels.ReadById(id);
-            if (fornecedor == null){
-                throw new Exception("Fornecedor inválido");
-            }
-
-            FornecedorModels.Delete(fornecedor);
         }
 
         public static List<FornecedorModels> Read(){

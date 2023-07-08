@@ -9,25 +9,26 @@ namespace Views{
         public TextBox txtNomemodelo;
         public Button btCadModelo;
         
-          public void btCadModelo_Click(object sender, EventArgs e) {
-            if (txtNomemodelo.Text == "") {
+        public void btCadModelo_Click(object sender, EventArgs e){
+            if(txtNomemodelo.Text == ""){
                 MessageBox.Show("Preencha os campos!");
                 return;
-            } else {
+            }else{
                 ModeloController.Create(txtNomemodelo.Text);
-                MessageBox.Show("Modelo criado com sucesso!");  
+                MessageBox.Show("Marca cadastrada com sucesso!");
                 ClearForm();
             }
             ModeloView ListModelo = Application.OpenForms.OfType<ModeloView>().FirstOrDefault();
-            if (ListModelo != null) {
+            if(ListModelo != null){
                 ListModelo.RefreshList();
             }
             this.Close();
         }
 
-        private void ClearForm() {
+        private void ClearForm(){
             txtNomemodelo.Clear();
         }
+
 
         public ModeloCreate(){
             this.Text = "Registrar Modelo";

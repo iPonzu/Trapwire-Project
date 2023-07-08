@@ -35,12 +35,12 @@ namespace Views{
         }
 
         
-        public void btCadMarca_Click (object sender, EventArgs e){
+        private void btCadMarca_Click (object sender, EventArgs e){
             var MarcaCreate = new Views.MarcaCreate();
             MarcaCreate.Show();
         }
         
-        public void btMarcaUpdate_Click (object sender, EventArgs e){
+        private void btMarcaUpdate_Click (object sender, EventArgs e){
             try{
                 MarcaModels marca = GetSelectedMarca(Option.Update);
                 RefreshList();
