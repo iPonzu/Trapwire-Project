@@ -67,72 +67,34 @@ namespace Views{
             this.txtcnpj.Text = fornecedor.Cnpj;
             this.txtcnpj.Location = new System.Drawing.Point(80, 70);
             this.txtcnpj.Size = new System.Drawing.Size(150, 20);
-            this.lblCnpj = new Label();
-            this.lblCnpj.Text = "CNPJ";
-            this.lblCnpj.Location = new System.Drawing.Point(10, 70);
-            this.lblCnpj.Size = new System.Drawing.Size(50, 20);
+            this.lblcnpj = new Label();
+            this.lblcnpj.Text = "CNPJ";
+            this.lblcnpj.Location = new System.Drawing.Point(10, 70);
+            this.lblcnpj.Size = new System.Drawing.Size(50, 20);
 
-            this.txtCnpj = new TextBox();
-            this.txtCnpj.Text = fornecedor.Cnpj;
-            this.txtCnpj.Location = new System.Drawing.Point(80, 70);
-            this.txtCnpj.Size = new System.Drawing.Size(150, 20);
-
-            this.lblTelefone = new Label();
-            this.lblTelefone.Text = "Telefone";
-            this.lblTelefone.Location = new System.Drawing.Point(10, 70);
-            this.lblTelefone.Size = new System.Drawing.Size(50, 20);
-
-            this.txtTelefone = new TextBox();
-            this.txtTelefone.Text = fornecedor.Telefone;
-            this.txtTelefone.Location = new System.Drawing.Point(80, 70);
-            this.txtTelefone.Size = new System.Drawing.Size(150, 20);
-
-            this.lblEndereco = new Label();
-            this.lblEndereco.Text = "Endereço";
-            this.lblEndereco.Location = new System.Drawing.Point(10, 70);
-            this.lblEndereco.Size = new System.Drawing.Size(50, 20);
-
-            this.txtEndereco = new TextBox();
-            this.txtEndereco.Text = fornecedor.Endereco;
-            this.txtEndereco.Location = new System.Drawing.Point(80, 70);
-            this.txtEndereco.Size = new System.Drawing.Size(150, 20);
-
-            this.lblNomeSocial = new Label();
-            this.lblNomeSocial.Text = "Nome Social";
-            this.lblNomeSocial.Location = new System.Drawing.Point(10, 70);
-            this.lblNomeSocial.Size = new System.Drawing.Size(50, 20);
-
-            this.txtNomeSocial = new TextBox();
-            this.txtNomeSocial.Text = fornecedor.NomeSocial;
-            this.txtNomeSocial.Location = new System.Drawing.Point(80, 70);
-            this.txtNomeSocial.Size = new System.Drawing.Size(150, 20);
+            this.txtcnpj = new TextBox();
+            this.txtcnpj.Text = fornecedor.Cnpj;
+            this.txtcnpj.Location = new System.Drawing.Point(80, 70);
+            this.txtcnpj.Size = new System.Drawing.Size(150, 20);
 
             this.btUpdateFornecedor = new Button();
             this.btUpdateFornecedor.Text = "Editar";
             this.btUpdateFornecedor.Location = new System.Drawing.Point(80, 260);
             this.btUpdateFornecedor.Size = new System.Drawing.Size(150, 35);
-<<<<<<< HEAD
             this.btUpdateFornecedor.Click += new EventHandler(btUpdateFornecedor_Click);
 
+
+
+         
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome); 
             this.Controls.Add(this.lblcnpj);  
             this.Controls.Add(this.txtcnpj);
-=======
-            this.btUpdateFornecedor.Click += new EventHandler(btUpdate_Click);
-
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome); 
-            this.Controls.Add(this.lblCnpj);  
-            this.Controls.Add(this.txtCnpj);
->>>>>>> cc5306b756261fa8a26ac60185295b43a92bfd46
-            this.Controls.Add(this.lblTelefone);  
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.lblEndereco);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.lblNomeSocial);
-            this.Controls.Add(this.txtNomeSocial);
-            this.Controls.Add(this.btUpdateFornecedor);
+            this.Controls.Add(this.lblcnpj);  
+            this.Controls.Add(this.txtcnpj);
+
         }
     }
 }
