@@ -67,6 +67,15 @@ namespace Views{
             this.txtcnpj.Text = fornecedor.Cnpj;
             this.txtcnpj.Location = new System.Drawing.Point(80, 70);
             this.txtcnpj.Size = new System.Drawing.Size(150, 20);
+            this.lblCnpj = new Label();
+            this.lblCnpj.Text = "CNPJ";
+            this.lblCnpj.Location = new System.Drawing.Point(10, 70);
+            this.lblCnpj.Size = new System.Drawing.Size(50, 20);
+
+            this.txtCnpj = new TextBox();
+            this.txtCnpj.Text = fornecedor.Cnpj;
+            this.txtCnpj.Location = new System.Drawing.Point(80, 70);
+            this.txtCnpj.Size = new System.Drawing.Size(150, 20);
 
             this.lblTelefone = new Label();
             this.lblTelefone.Text = "Telefone";
@@ -102,12 +111,21 @@ namespace Views{
             this.btUpdateFornecedor.Text = "Editar";
             this.btUpdateFornecedor.Location = new System.Drawing.Point(80, 260);
             this.btUpdateFornecedor.Size = new System.Drawing.Size(150, 35);
+<<<<<<< HEAD
             this.btUpdateFornecedor.Click += new EventHandler(btUpdateFornecedor_Click);
 
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome); 
             this.Controls.Add(this.lblcnpj);  
             this.Controls.Add(this.txtcnpj);
+=======
+            this.btUpdateFornecedor.Click += new EventHandler(btUpdate_Click);
+
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.txtNome); 
+            this.Controls.Add(this.lblCnpj);  
+            this.Controls.Add(this.txtCnpj);
+>>>>>>> cc5306b756261fa8a26ac60185295b43a92bfd46
             this.Controls.Add(this.lblTelefone);  
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblEndereco);

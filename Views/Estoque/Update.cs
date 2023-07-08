@@ -9,7 +9,6 @@ namespace Views{
         public Label lblEndereco;
         public TextBox txtEndereco;
         public Button btUpdateEstoque;
-
         public EstoqueModels estoque;
 
         private void btUpdate_Click(object sender, EventArgs e){
@@ -29,13 +28,11 @@ namespace Views{
             }catch(Exception ex){
                 throw ex;
             }
-        
         }
-
         public EstoqueUpdate(EstoqueModels estoque) {
             this.estoque = estoque;
 
-            this.Text = "Editar estoque";
+            this.Text = "Editar Estoque";
             this.Size = new System.Drawing.Size(280, 360);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -44,9 +41,9 @@ namespace Views{
             this.ShowIcon = false;
             
             this.lblNome = new Label();
-            this.lblNome.Text = "Modelo";
-            this.lblNome.Location = new Point(10, 40);
-            this.lblNome.Size = new Size(50, 20);
+            this.lblNome.Text = "Nome";
+            this.lblNome.Location = new System.Drawing.Point(10, 40);
+            this.lblNome.Size = new System.Drawing.Size(50, 20);
 
             this.txtNome = new TextBox();
             this.txtNome.Text = estoque.Nome;
@@ -54,9 +51,9 @@ namespace Views{
             this.txtNome.Size = new System.Drawing.Size(150, 20);
 
             this.lblEndereco = new Label();
-            this.lblEndereco.Text = "Categoria";
-            this.lblEndereco.Location = new Point(10, 70);
-            this.lblEndereco.Size = new Size(50, 20);
+            this.lblEndereco.Text = "Endereço";
+            this.lblEndereco.Location = new System.Drawing.Point(10, 70);
+            this.lblEndereco.Size = new System.Drawing.Size(50, 20);
 
             this.txtEndereco = new TextBox();
             this.txtEndereco.Text = estoque.Endereco;
@@ -68,15 +65,12 @@ namespace Views{
             this.btUpdateEstoque.Location = new System.Drawing.Point(80, 260);
             this.btUpdateEstoque.Size = new System.Drawing.Size(150, 35);
             this.btUpdateEstoque.Click += new EventHandler(btUpdate_Click);
-        
-            this.Controls.Add(this.txtNome);   
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.lblEndereco);
+
             this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblEndereco);
+            this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.btUpdateEstoque);
-
-
         }
-        
     }
 }

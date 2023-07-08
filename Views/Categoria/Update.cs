@@ -32,7 +32,7 @@ namespace Views{
             this.categoria = categoria;
         
             this.Text = "Atualizar Categoria";
-            this.Size = new Size(300, 360);
+            this.Size = new System.Drawing.Size(280, 360);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -40,6 +40,7 @@ namespace Views{
             this.ShowIcon = false;   
             this.ShowInTaskbar = false;
 
+<<<<<<< HEAD
             // lblId = new Label();
             // lblId.Text = "Id: ";
             // lblId.Size = new Size(50, 20);
@@ -50,23 +51,40 @@ namespace Views{
             // txtId.Location = new Point(80, 40);
             // txtId.Size = new Size(150, 20);
             // this.Controls.Add(txtId);
+=======
+            this.lblId = new Label();
+            this.lblId.Text = "Id";
+            this.lblId.Location = new System.Drawing.Point(10, 40);
+            this.lblId.Size = new System.Drawing.Size(50, 20);
+            this.Controls.Add(lblId);
 
-            lblNome = new Label();
-            lblNome.Text = "Nome: ";
-            lblNome.Size = new Size(50, 20);
-            lblNome.Location = new Point(10, 80);
+            this.txtId = new TextBox();
+            this.txtId.Location = new System.Drawing.Point(80, 40);
+            this.txtId.Size = new System.Drawing.Size(150, 20);
+            this.Controls.Add(txtId);
+>>>>>>> cc5306b756261fa8a26ac60185295b43a92bfd46
+
+            this.lblNome = new Label();
+            this.lblNome.Text = "Nome";
+            this.lblNome.Location = new System.Drawing.Point(10, 70);
+            this.lblNome.Size = new System.Drawing.Size(50, 20);
             this.Controls.Add(lblNome);
 
-            txtNome = new TextBox();
-            txtNome.Location = new Point(80, 80);
-            txtNome.Size = new Size(150, 20);
+            this.txtNome = new TextBox();
+            this.txtNome.Location = new System.Drawing.Point(80, 70);
+            this.txtNome.Size = new System.Drawing.Size(150, 20);
             this.Controls.Add(txtNome);
 
-            btUpdateCategoria = new Button();
-            btUpdateCategoria.Text = "Atualizar";
-            btUpdateCategoria.Size = new Size(150, 25);
-            btUpdateCategoria.Location = new Point(80, 260);
-            btUpdateCategoria.Click += new EventHandler(btUpdateCategoria_Click);
+            this.btUpdateCategoria = new Button();
+            this.btUpdateCategoria.Text = "Atualizar";
+            this.btUpdateCategoria.Location = new System.Drawing.Point(80, 260);
+            this.btUpdateCategoria.Size = new System.Drawing.Size(150, 35);
+            this.btUpdateCategoria.Click += new EventHandler(btUpdateCategoria_Click);
+
+            this.Controls.Add(lblId);
+            this.Controls.Add(txtId);
+            this.Controls.Add(lblNome);
+            this.Controls.Add(txtNome);
             this.Controls.Add(btUpdateCategoria);
         }
     }
