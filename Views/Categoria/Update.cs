@@ -40,7 +40,6 @@ namespace Views{
             this.ShowIcon = false;   
             this.ShowInTaskbar = false;
 
-<<<<<<< HEAD
             // lblId = new Label();
             // lblId.Text = "Id: ";
             // lblId.Size = new Size(50, 20);
@@ -51,18 +50,18 @@ namespace Views{
             // txtId.Location = new Point(80, 40);
             // txtId.Size = new Size(150, 20);
             // this.Controls.Add(txtId);
-=======
-            this.lblId = new Label();
-            this.lblId.Text = "Id";
-            this.lblId.Location = new System.Drawing.Point(10, 40);
-            this.lblId.Size = new System.Drawing.Size(50, 20);
-            this.Controls.Add(lblId);
 
-            this.txtId = new TextBox();
-            this.txtId.Location = new System.Drawing.Point(80, 40);
-            this.txtId.Size = new System.Drawing.Size(150, 20);
-            this.Controls.Add(txtId);
->>>>>>> cc5306b756261fa8a26ac60185295b43a92bfd46
+            // this.lblId = new Label();
+            // this.lblId.Text = "Id";
+            // this.lblId.Location = new System.Drawing.Point(10, 40);
+            // this.lblId.Size = new System.Drawing.Size(50, 20);
+            // this.Controls.Add(lblId);
+
+            // this.txtId = new TextBox();
+            // this.txtId.Location = new System.Drawing.Point(80, 40);
+            // this.txtId.Size = new System.Drawing.Size(150, 20);
+            // this.Controls.Add(txtId);
+
 
             this.lblNome = new Label();
             this.lblNome.Text = "Nome";
@@ -81,8 +80,8 @@ namespace Views{
             this.btUpdateCategoria.Size = new System.Drawing.Size(150, 35);
             this.btUpdateCategoria.Click += new EventHandler(btUpdateCategoria_Click);
 
-            this.Controls.Add(lblId);
-            this.Controls.Add(txtId);
+            // this.Controls.Add(lblId);
+            // this.Controls.Add(txtId);
             this.Controls.Add(lblNome);
             this.Controls.Add(txtNome);
             this.Controls.Add(btUpdateCategoria);

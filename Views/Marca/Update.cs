@@ -33,7 +33,7 @@ namespace Views{
             this.marca = marca;
 
             this.Text = "Editar Marca";
-            this.Size = new System.Drawing.Size(234, 191);
+            this.Size = new System.Drawing.Size(300, 400);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;

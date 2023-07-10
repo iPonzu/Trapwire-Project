@@ -41,7 +41,7 @@ namespace Views{
             this.fornecedor = fornecedor;
             
             this.Text = "Editar Fornecedor";
-            this.Size = new System.Drawing.Size(280, 360);
+            this.Size = new System.Drawing.Size(300, 400);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -94,6 +94,7 @@ namespace Views{
             this.Controls.Add(this.txtNome); 
             this.Controls.Add(this.lblcnpj);  
             this.Controls.Add(this.txtcnpj);
+            this.Controls.Add(this.btUpdateFornecedor);
 
         }
     }

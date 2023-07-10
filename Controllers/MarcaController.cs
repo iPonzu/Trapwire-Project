@@ -11,21 +11,29 @@ namespace Controllers{
         }
 
         public static void Update(string idRef, string nome){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
-            } catch (Exception e){
-                throw new Exception("ID inválido");
-            }
-            MarcaModels marca = MarcaModels.ReadById(id);
-            if (marca == null){
-                throw new Exception("Marca inválida");
-            }
-            if(nome != null && nome.Length > 0){
-                marca.Nome = nome;
-            }
+            // int id = 0;
+            // try{
+            //     id = int.Parse(idRef);
+            // } catch (Exception e){
+            //     throw new Exception("ID inválido");
+            // }
+            // MarcaModels marca = MarcaModels.ReadById(id);
+            // if (marca == null){
+            //     throw new Exception("Marca inválida");
+            // }
+            // if(nome != null && nome.Length > 0){
+            //     marca.Nome = nome;
+            // }
 
-            MarcaModels.Update(marca);
+            // MarcaModels.Update(marca);
+            using (var context = new Context()){
+                var marca = context.Marcas.FirstOrDefault(m => m.Nome == nome);
+                if(marca != null){
+                    marca.Nome = nome;
+                    context.Marcas.Update(marca);
+                    context.SaveChanges();
+                }
+            }
         }
         public static void Delete(string idRef, string nome){  
             using (var context = new Context()){

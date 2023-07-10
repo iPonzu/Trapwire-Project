@@ -14,8 +14,23 @@ namespace Views{
 
         public ProdutoModels produto;
 
-        private void btUpdate_Click(object sender, EventArgs e){
+            private void btUpdate_Click(object sender, EventArgs e){
             ProdutoModels produtoToUpdate = this.produto;
+            produtoToUpdate.Modeloid = this.txtModelo.Text;
+            produtoToUpdate.Categoriaid = this.txtCategoria.Text;
+
+            try{
+                if(produtoToUpdate.Id == 0 || produtoToUpdate.Modeloid == null || produtoToUpdate.Categoriaid == null){
+                    MessageBox.Show("Preencha os campos!");
+                    return;
+                }else{
+                    ProdutoModels.Update(produtoToUpdate);
+                    MessageBox.Show("Produto modificado.");
+                }
+                this.Close();
+            }catch(Exception ex){
+                throw ex;
+            }
         }
         public ProdutoUpdate(ProdutoModels produto){
             this.produto = produto;
@@ -59,6 +74,7 @@ namespace Views{
             this.Controls.Add(this.btUpdateProduto);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblModelo);
+            this.Controls.Add(this.btUpdateProduto);
         
         }
     }

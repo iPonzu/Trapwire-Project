@@ -24,7 +24,13 @@ namespace Views{
                 ProdutoController.Create(txtModelo.Text, txtCategoria.Text);
                 MessageBox.Show("Produto criado com sucesso!");  
             }
+            ProdutoView ListProduto = Application.OpenForms.OfType<ProdutoView>().FirstOrDefault();
+            if (ListProduto != null) {
+                ListProduto.RefreshList();
+            }
+            this.Close();
         }
+
 
         public ProdutoCreate(){
             Text = "Registrar Produto";

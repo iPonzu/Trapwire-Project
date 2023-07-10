@@ -41,16 +41,15 @@ namespace Views{
             ModeloCreate.Show();
         }
 
-        private void btModeloUpdate_Click (object sender, EventArgs e){
-            try{
-                ModeloModels modelo = GetSelectedModelo(Option.Update);
+            private void btModeloUpdate_Click(object sender, EventArgs e){
+            ModeloModels modelo = GetSelectedModelo(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza de que quer atualizar este estoque agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(modelo != null){
                 var ModeloUpdate = new Views.ModeloUpdate(modelo);
                 if(ModeloUpdate.ShowDialog() == DialogResult.OK){
                     RefreshList();
-                    MessageBox.Show("Modelo Atualizado com sucesso");
+                    MessageBox.Show("Estoque atualizado com sucesso");
                 }
-            } catch (Exception err) {
-                MessageBox.Show("Não foi possível editar o modelo desejado" + err.Message);
             }
             RefreshList();
         }
@@ -129,4 +128,5 @@ namespace Views{
         }
 
     }
+    
 }

@@ -13,7 +13,10 @@ namespace Views{
                 produto.Categoriaid.ToString(),
                 produto.Modeloid.ToString(),
             };  
+            ListViewItem item = new ListViewItem(row);
+            ListProduto.Items.Add(item);
         }
+
         public void RefreshList(){
             ListProduto.Items.Clear();
             List<ProdutoModels> produtos = ProdutoModels.Read();
@@ -32,35 +35,66 @@ namespace Views{
         }
 
         
-        public void btCadProduto_Click (object sender, EventArgs e){
+        private void btCadProduto_Click (object sender, EventArgs e){
             var ProdutoCreate = new Views.ProdutoCreate();
             ProdutoCreate.Show();
         }
         
-        public void btProdutoUpdate_Click (object sender, EventArgs e){
-            try{
-                ProdutoModels produto = GetSelectedProduto(Option.Update);
-                RefreshList();
+        // private void btProdutoUpdate_Click (object sender, EventArgs e){
+        //     try{
+        //         ProdutoModels produto = GetSelectedProduto(Option.Update);
+        //         RefreshList();
+        //         var ProdutoUpdate = new Views.ProdutoUpdate(produto);
+        //         if(ProdutoUpdate.ShowDialog() == DialogResult.OK){
+        //            RefreshList();
+        //            MessageBox.Show("Produto Atualizado com sucesso"); 
+        //         }
+        //     } catch (Exception err) {
+        //         MessageBox.Show("Não foi possível excluir o produto desejado" + err.Message);
+        //     }
+        // }
+
+        // private void btProdutoUpdate_Click(object sender, EventArgs e){
+        //     ProdutoModels produto = GetSelectedProduto(Option.Update);
+        //     DialogResult result = MessageBox.Show("Tem certeza de que quer atualizar este produto agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+        //     if(produto != null){
+        //         var ProdutoUpdate = new Views.ProdutoUpdate(produto);
+        //         if(ProdutoUpdate.ShowDialog() == DialogResult.OK){
+        //             RefreshList();
+        //             MessageBox.Show("Produto Atualizado com sucesso"); 
+        //         }
+        //     }
+        // }
+        private void btUpdateProduto_Click(object sender, EventArgs e){
+            ProdutoModels produto = GetSelectedProduto(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza de que quer atualizar este produto agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes){
                 var ProdutoUpdate = new Views.ProdutoUpdate(produto);
                 if(ProdutoUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Produto Atualizado com sucesso"); 
+                    RefreshList();
+                    MessageBox.Show("Produto Atualizado com sucesso"); 
                 }
-            } catch (Exception err) {
-                MessageBox.Show("Não foi possível excluir o produto desejado" + err.Message);
             }
         }
-        
-        private void btDelete_Click (object sender, EventArgs e){
-            try{
-                ProdutoModels Produto = GetSelectedProduto(Option.Delete);
-                DialogResult result = MessageBox.Show("Tem certeza que quer excluir este produto agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes){
-                    Controllers.ProdutoController.Delete(Convert.ToString(Produto.Id));
-                    RefreshList();
-                }
-            } catch (Exception err) {
-                MessageBox.Show("Não foi possível excluir o produto" + err.Message);
+
+        // private void btDelete_Click (object sender, EventArgs e){
+        //     try{
+        //         ProdutoModels Produto = GetSelectedProduto(Option.Delete);
+        //         DialogResult result = MessageBox.Show("Tem certeza que quer excluir este produto agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
+        //         if(result == DialogResult.Yes){
+        //             Controllers.ProdutoController.Delete(Convert.ToString(Produto.Id));
+        //             RefreshList();
+        //         }
+        //     } catch (Exception err) {
+        //         MessageBox.Show("Não foi possível excluir o produto" + err.Message);
+        //     }
+        // }
+        private void btDelete_Click(object sender, EventArgs e){
+            ProdutoModels produto = GetSelectedProduto(Option.Delete);
+            DialogResult result = MessageBox.Show("Tem certeza que quer excluir este produto agora?" , "Confirmar exlcusão", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes){
+                Controllers.ProdutoController.Delete(Convert.ToString(produto.Id));
+                RefreshList();
             }
         }
 
@@ -102,7 +136,7 @@ namespace Views{
             btUpdate.Text = "Editar";
             btUpdate.Size = new Size(100, 30);
             btUpdate.Location = new Point(170, 330);
-            btUpdate.Click += new EventHandler(btProdutoUpdate_Click);
+            btUpdate.Click += new EventHandler(btUpdateProduto_Click);
             this.Controls.Add(btUpdate);
 
             Button btDelete = new Button();

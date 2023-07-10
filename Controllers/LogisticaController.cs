@@ -12,24 +12,36 @@ namespace Controllers{
         }
 
         public static void Update(string idRef, string data, int quantidade, string produtoid, string estoqueid){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
-            } catch (Exception e){
-                throw new Exception("Id inválido.");
-            }
-            LogisticaModels logistica = LogisticaModels.ReadById(id);
-            if(logistica == null){
-                throw new Exception("Logistica inválida.");
-            }
-            if(data == null && quantidade == null && produtoid != null && produtoid.Length > 0 && estoqueid != null && estoqueid.Length > 0){
-                logistica.Data = data;
-                logistica.Quantidade = quantidade;
-                logistica.Produtoid = produtoid;
-                logistica.Estoqueid = estoqueid;    
-            }
+            // int id = 0;
+            // try{
+            //     id = int.Parse(idRef);
+            // } catch (Exception e){
+            //     throw new Exception("Id inválido.");
+            // }
+            // LogisticaModels logistica = LogisticaModels.ReadById(id);
+            // if(logistica == null){
+            //     throw new Exception("Logistica inválida.");
+            // }
+            // if(data == null && quantidade == null && produtoid != null && produtoid.Length > 0 && estoqueid != null && estoqueid.Length > 0){
+            //     logistica.Data = data;
+            //     logistica.Quantidade = quantidade;
+            //     logistica.Produtoid = produtoid;
+            //     logistica.Estoqueid = estoqueid;    
+            // }
 
-            LogisticaModels.Update(logistica);
+            // LogisticaModels.Update(logistica);
+
+            using (var context = new Context()){
+                var logistica = context.Logisticas.FirstOrDefault(l => l.Data == data);
+                if(logistica != null){
+                    logistica.Data = data;
+                    logistica.Quantidade = quantidade;
+                    logistica.Produtoid = produtoid;
+                    logistica.Estoqueid = estoqueid;
+                    context.Logisticas.Update(logistica);
+                    context.SaveChanges();
+                }
+            }
         }   
         public static void Delete(string idRef){
             int id = 0;

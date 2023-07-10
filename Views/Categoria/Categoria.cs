@@ -71,7 +71,7 @@ namespace Views{
 
         public CategoriaView(){
             this.Text = "Gerenciar Categorias";
-            this.Size = new System.Drawing.Size(800, 600);
+            this.Size = new System.Drawing.Size(800, 700);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = true;
@@ -94,27 +94,24 @@ namespace Views{
 
             Button btCrt = new Button();
             btCrt.Text = "Cadastrar";
-            btCrt.Location = new System.Drawing.Point(50, 330);
-            btCrt.Size = new System.Drawing.Size(100, 30);
+            btCrt.Location = new System.Drawing.Point(50, 550);
             btCrt.Click += new EventHandler(btCadCategoria_Click);
 
             Button btUpd = new Button();
             btUpd.Text = "Atualizar";
-            btUpd.Location = new System.Drawing.Point(170, 330);
-            btUpd.Size = new System.Drawing.Size(100, 30);
+            btUpd.Location = new System.Drawing.Point(150, 550);
             btUpd.Click += new EventHandler(btCategoriaUpdate_Click);
 
             Button btDelete = new Button();
             btDelete.Text = "Deletar";
-            btDelete.Location = new System.Drawing.Point(290, 330);
-            btDelete.Size = new System.Drawing.Size(100, 30);
+            btDelete.Location = new System.Drawing.Point(250, 550);
             btDelete.Click += new EventHandler(btDelete_Click);
 
             Button btClose = new Button();
             btClose.Text = "Fechar";
-            btClose.Location = new System.Drawing.Point(450, 330);
-            btClose.Size = new System.Drawing.Size(100, 30);
+            btClose.Location = new System.Drawing.Point(350, 550);
             btClose.Click += new EventHandler(btClose_Click);
+
             
             Controls.Add(ListCategoria);
             Controls.Add(btCrt);

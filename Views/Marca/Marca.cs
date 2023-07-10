@@ -40,18 +40,30 @@ namespace Views{
             MarcaCreate.Show();
         }
         
-        private void btMarcaUpdate_Click (object sender, EventArgs e){
-            try{
-                MarcaModels marca = GetSelectedMarca(Option.Update);
-                RefreshList();
+        // private void btMarcaUpdate_Click (object sender, EventArgs e){
+        //     try{
+        //         MarcaModels marca = GetSelectedMarca(Option.Update);
+        //         RefreshList();
+        //         var MarcaUpdate = new Views.MarcaUpdate(marca);
+        //         if(MarcaUpdate.ShowDialog() == DialogResult.OK){
+        //            RefreshList();
+        //            MessageBox.Show("Marca Atualizada com sucesso"); 
+        //         }
+        //     } catch (Exception ex) {
+        //         MessageBox.Show("Não foi possível excluir a marca desejada" + ex.Message);
+        //     }
+        // }
+        private void btMarcaUpdate_Click(object sender, EventArgs e){
+            MarcaModels marca = GetSelectedMarca(Option.Update);
+            DialogResult result = MessageBox.Show("Tem certeza de que quer atualizar esta marca agora?" , "Confirmar atualização", MessageBoxButtons.YesNo);
+            if(marca != null){
                 var MarcaUpdate = new Views.MarcaUpdate(marca);
                 if(MarcaUpdate.ShowDialog() == DialogResult.OK){
-                   RefreshList();
-                   MessageBox.Show("Marca Atualizada com sucesso"); 
+                    RefreshList();
+                    MessageBox.Show("Marca atualizada com sucesso");
                 }
-            } catch (Exception ex) {
-                MessageBox.Show("Não foi possível excluir a marca desejada" + ex.Message);
             }
+            RefreshList();
         }
         
         private void btDelete_Click (object sender, EventArgs e){

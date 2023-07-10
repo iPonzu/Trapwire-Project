@@ -10,21 +10,29 @@ namespace Controllers{
             new ModeloModels(nome);
         }
 
-        public static void Update(string idRef, string nome){
-            int id = 0;
-            try{
-                id = int.Parse(idRef);
-            } catch(Exception e){
-                throw new Exception ("ID Inválido");
+        public static void Update(string nome){
+            // int id = 0;
+            // try{
+            //     id = int.Parse(idRef);
+            // } catch(Exception e){
+            //     throw new Exception ("ID Inválido");
+            // }
+            // ModeloModels modelo = ModeloModels.ReadById(id);
+            // if(modelo == null){
+            //     throw new Exception("Modelo inválido.");
+            // }
+            // if(modelo != null){
+            //     modelo.Nome = nome;
+            // }
+            // ModeloModels.Update(modelo);
+            using (var context = new Context()){
+                var modelo = context.Modelos.FirstOrDefault(m => m.Nome == nome);
+                if(modelo != null){
+                    modelo.Nome = nome;
+                    context.Modelos.Update(modelo);
+                    context.SaveChanges();
+                }
             }
-            ModeloModels modelo = ModeloModels.ReadById(id);
-            if(modelo == null){
-                throw new Exception("Modelo inválido.");
-            }
-            if(modelo != null){
-                modelo.Nome = nome;
-            }
-            ModeloModels.Update(modelo);
         }  
 
         public static void Delete(string idRef, string nome){
